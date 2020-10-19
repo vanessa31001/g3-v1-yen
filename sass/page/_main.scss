@@ -1,0 +1,76 @@
+//揪團
+.home_group{
+    width: 100%;
+    // min-height: 100vh;
+    height: 500px;
+    background-color: #f6f3ed;
+
+    background-image: url(../../pic/index/1018_pic-01.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+//設備
+.home_equipment{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f6f3ed;
+
+    background-image: url(../../pic/index/1018_pic-02.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+//營地
+.home_camping{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f6f3ed;
+
+    background-image: url(../../pic/index/1018_pic-03.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+//小遊戲
+.home_game{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f6f3ed;
+
+    background-image: url(../../pic/index/1018_pic-04.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    .game_table{
+        margin: 100px auto 0;
+        .game_title{
+            margin: 0 auto;
+            // border: 1px solid red;
+            margin-left: 20%;
+            max-width: 200px;
+            margin-top: 6%;
+        }
+        .game_title_word{
+            margin: 0 auto;
+            margin-left: 20%;
+            max-width: 200px;
+        }
+        form{
+            .game_title_question01{
+                margin: 0 auto;  
+                // border: 1px solid red;
+                text-align: center;
+                padding-top: 57px;
+            }
+            .game_button{
+                text-align: center;
+                margin: auto;
+                margin-top: 40px;
+            }
+        }
+    }
+}

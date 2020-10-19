@@ -3592,6 +3592,76 @@ input[type="submit"], button {
   position: relative;
 }
 
+.home_group {
+  width: 100%;
+  height: 500px;
+  background-color: #f6f3ed;
+  background-image: url(../../pic/index/1018_pic-01.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home_equipment {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6f3ed;
+  background-image: url(../../pic/index/1018_pic-02.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home_camping {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6f3ed;
+  background-image: url(../../pic/index/1018_pic-03.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home_game {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6f3ed;
+  background-image: url(../../pic/index/1018_pic-04.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+  background-position: center;
+}
+
+.home_game .game_table {
+  margin: 100px auto 0;
+}
+
+.home_game .game_table .game_title {
+  margin: 0 auto;
+  margin-left: 20%;
+  max-width: 200px;
+  margin-top: 6%;
+}
+
+.home_game .game_table .game_title_word {
+  margin: 0 auto;
+  margin-left: 20%;
+  max-width: 200px;
+}
+
+.home_game .game_table form .game_title_question01 {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 57px;
+}
+
+.home_game .game_table form .game_button {
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+}
+
 .member_section {
   height: auto;
   padding-bottom: 36px;
@@ -3924,6 +3994,7 @@ input[type="submit"], button {
   border-width: 3px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .mainbtn1:hover {
@@ -3949,6 +4020,7 @@ input[type="submit"], button {
   border-width: 3px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .mainbtn2:hover {
@@ -3974,6 +4046,7 @@ input[type="submit"], button {
   border-width: 3px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .secondbtn1:hover {
@@ -3999,6 +4072,7 @@ input[type="submit"], button {
   border-width: 3px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .secondbtn2:hover {
@@ -4023,6 +4097,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #00A5A3;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .thirdbtn1_green:hover {
@@ -4040,6 +4115,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #00A5A3;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .thirdbtn2_green:hover {
@@ -4057,6 +4133,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #FC8F24;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .thirdbtn1_orange:hover {
@@ -4074,6 +4151,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #FC8F24;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .thirdbtn2_orange:hover {
@@ -4090,6 +4168,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #70CACE;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tagbtn_yellow {
@@ -4101,6 +4180,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #FFCD43;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tagbtn_gray {
@@ -4112,6 +4192,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #C4C4C4;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .green1 {

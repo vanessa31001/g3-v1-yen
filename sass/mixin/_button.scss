@@ -9,6 +9,7 @@
     border-width: $border;
     font-weight: $weight_btn;
     position: relative;
+    cursor: pointer;
 
     &:hover{
         background-color:$white;
@@ -31,6 +32,7 @@
     border-width: $border;
     font-weight: $weight_btn;
     position: relative;
+    cursor: pointer;
 
     &:hover{
         background-color:$greenColor3;
@@ -53,6 +55,7 @@
     border-width: $border;
     font-weight: $weight_btn;
     position: relative;
+    cursor: pointer;
 
     &:hover{
         background-color:$white;
@@ -75,6 +78,7 @@
     border-width: $border;
     font-weight: $weight_btn;
     position: relative;
+    cursor: pointer;
 
     &:hover{
         background-color:$greenColor3;
@@ -96,6 +100,7 @@
     border-width: 2px;
     border-color: $greenColor3;
     font-weight: $weight_btn;
+    cursor: pointer;
 
     &:hover{
         background-color:$white;
@@ -112,6 +117,7 @@
     border-width: 2px;
     border-color: $greenColor3;
     font-weight: $weight_btn;
+    cursor: pointer;
 
     &:hover{
         background-color:$greenColor3;
@@ -129,6 +135,7 @@
     border-width: 2px;
     border-color: $orangeColor1;
     font-weight: $weight_btn;
+    cursor: pointer;
 
     &:hover{
         background-color:$white;
@@ -145,6 +152,7 @@
     border-width: 2px;
     border-color: $orangeColor1;
     font-weight: $weight_btn;
+    cursor: pointer;
 
     &:hover{
         background-color:$orangeColor1;
@@ -161,6 +169,7 @@
     border-radius: $radius2;
     border-color: $greenColor2;
     font-weight: $weight_btn;
+    cursor: pointer;
 }
 @mixin tagbtn_yellow(){
     background-color: $yellowColor2; 
@@ -171,6 +180,7 @@
     border-radius: $radius2;
     border-color: $yellowColor2;
     font-weight: $weight_btn;
+    cursor: pointer;
 }    
 @mixin tagbtn_gray(){
     background-color: $grayColor2; 
@@ -181,6 +191,7 @@
     border-radius: $radius2;
     border-color: $grayColor2;
     font-weight: $weight_btn;
+    cursor: pointer;
 }    
 
 
