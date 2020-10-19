@@ -1,57 +1,127 @@
 .cloud{
-    // width: 154px;
-    // height: 154px;
-    animation: move 20s linear infinite;
-    // border: 1px solid red;
-    z-index: 4;
-    position: relative;
+    animation: move 18s linear infinite;
+    position: fixed;
     top: 30vh;
+    opacity: 0.9;
+    // border: 1px solid red;
 }
 @keyframes move {
-    50% {
-      margin-left: 300px;
+    0%{
+        transform: translateX(-300px)
     }
-  }
+    100%{
+        transform: translateX(1800px)
+    }
+}
 
-//揪團
-.homepage_bg{
-    padding-top:100px;
-    // margin-top: 10px;
+.cloud2{
+    animation: move2 25s linear infinite;
+    position: fixed;
+    top: 20vh;
+    opacity: 0.9;
+    // border: 1px solid black;
+}
+@keyframes move2 {
+    0%{
+        transform: translateX(-550px)
+    }
+    100%{
+        transform: translateX(2000px)
+    }
+}
+
+.homepage_bgcolor{
     width: 100%;
     height: 100%;
     background-color:$bgcColor;
-    background-image: url(../../pic/index/1019_BG-11.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    // border: 1px solid red;
-    z-index: 6;
-    section{
-        height: 800px;
-    }
-    .home{
-        height: 900px;
+    border: 1px solid red;
+    z-index: 1;
+    .homepage_bgpic{
+        background-image: url(../../pic/index/1019_BG-11.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 7;
+        section{
+            height: 750px;
+        }
+        .home{
+            height: 900px;
+        }
     }
 }
+//揪團
 .home_group{
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: 1px solid green;
+    .content1{
+        border: 1px solid green;
+        max-width: 900px;
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+    }
+}
+
+//設備交換
+.home_equipment{
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid green;
+    .content2{
+        border: 1px solid green;
+        height: 750px;
+        margin: 50px auto 0;
+        
+    }
+}
+
+
+
+//營地搜尋
+.home_camping{
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid green;
+    .content3{
+        border: 1px solid green;
+        height: 750px;
+        margin: 100px auto 0;
+    }
+}
+.home_letter{
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid green;
+    .content1{
+        border: 1px solid green;
+        height: 750px;
+        margin: 0 auto;
+    }
 }
 
 //小遊戲
 .home_game{
     width: 100%;
     height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: contain;
-    background-position: center;
-    border: 1px solid red;
     .game_table{
-        margin: 100px auto 0;
+        margin: 200px auto 0;
+        padding-top: 100px;
+        // border: 1px solid red;
         .game_title{
             margin: 0 auto;
             // border: 1px solid red;

@@ -114,7 +114,6 @@ table {
   font-weight: bold;
   font-size: 18px;
   width: 80px;
-  height: 40px;
   line-height: 40px;
   text-align: center;
   border-radius: 10px;
@@ -1603,7 +1602,7 @@ header div.nav_logo a.logo_link.-up {
   margin: 0 auto;
   text-align: center;
   position: absolute;
-  z-index: 15;
+  z-index: 2;
 }
 
 .nav_list ul li {
@@ -1614,8 +1613,25 @@ header div.nav_logo a.logo_link.-up {
 }
 
 .nav_list ul li a {
-  text-decoration: none;
-  font-size: 1rem;
+  position: relative;
+}
+
+.nav_list ul li a::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: 110%;
+  bottom: -5px;
+  height: 0;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav_list ul li a:hover::after {
+  left: -10%;
+  right: -10%;
+  border-bottom: 3px solid #FC8F24;
 }
 
 .nav_list ul li:nth-child(3) {
@@ -3045,7 +3061,7 @@ input[type="submit"], button {
   border: 1px solid #00A5A3;
   border-radius: 8px;
   padding: 10px 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .groupBlock .group .gRight .poster_inform .poster {
@@ -3117,6 +3133,7 @@ input[type="submit"], button {
   border-radius: 0 0 10px 10px;
   height: 120px;
   padding: 10px 30px;
+  background-color: #EFEFEF;
 }
 
 .groupBlock .msg .third_title {
@@ -3427,7 +3444,6 @@ input[type="submit"], button {
   border-radius: 10px;
   overflow: hidden;
   padding: 45px;
-  height: 880px;
 }
 
 .groupNewStart .top {
@@ -3449,28 +3465,37 @@ input[type="submit"], button {
 
 .groupNewStart .right .btn {
   width: 100%;
-  text-align: center;
+  font-size: 0;
+}
+
+.groupNewStart .right .btn input[type="button"] {
+  width: calc((100% - 20px) / 2);
+  display: inline-block;
+  margin: 5px;
 }
 
 .pic {
-  margin: 10px auto 45px;
+  margin: 10px auto;
   font-size: 0;
   vertical-align: middle;
 }
 
 .pic .uploadImg {
-  border: 1px solid red;
+  display: inline-block;
+  border: 3px solid #00A5A3;
   width: 100%;
   height: 250px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
+  text-align: center;
   cursor: pointer;
 }
 
-.pic .uploadImg span {
+.pic .uploadImg img {
   display: block;
-  text-align: center;
+  width: 45%;
+  margin: 30px auto 10px;
 }
 
 .pic .uploadImg #theFile {
@@ -3509,12 +3534,6 @@ input[type="submit"], button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.pic .imgs .now {
-  border: 5px solid #00A5A3;
-  text-align: left;
-  font-size: 0;
 }
 
 .picI .imgs {
@@ -3686,42 +3705,87 @@ input[type="submit"], button {
 }
 
 .cloud {
-  -webkit-animation: move 20s linear infinite;
-          animation: move 20s linear infinite;
-  z-index: 4;
-  position: relative;
+  -webkit-animation: move 18s linear infinite;
+          animation: move 18s linear infinite;
+  position: fixed;
   top: 30vh;
+  opacity: 0.9;
 }
 
 @-webkit-keyframes move {
-  50% {
-    margin-left: 300px;
+  0% {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    -webkit-transform: translateX(1800px);
+            transform: translateX(1800px);
   }
 }
 
 @keyframes move {
-  50% {
-    margin-left: 300px;
+  0% {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    -webkit-transform: translateX(1800px);
+            transform: translateX(1800px);
   }
 }
 
-.homepage_bg {
-  padding-top: 100px;
+.cloud2 {
+  -webkit-animation: move2 25s linear infinite;
+          animation: move2 25s linear infinite;
+  position: fixed;
+  top: 20vh;
+  opacity: 0.9;
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    -webkit-transform: translateX(-550px);
+            transform: translateX(-550px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    -webkit-transform: translateX(-550px);
+            transform: translateX(-550px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+
+.homepage_bgcolor {
   width: 100%;
   height: 100%;
   background-color: #AFDCDE;
+  border: 1px solid red;
+  z-index: 1;
+}
+
+.homepage_bgcolor .homepage_bgpic {
   background-image: url(../../pic/index/1019_BG-11.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 6;
+  position: relative;
+  z-index: 7;
 }
 
-.homepage_bg section {
-  height: 800px;
+.homepage_bgcolor .homepage_bgpic section {
+  height: 750px;
 }
 
-.homepage_bg .home {
+.homepage_bgcolor .homepage_bgpic .home {
   height: 900px;
 }
 
@@ -3731,20 +3795,70 @@ input[type="submit"], button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border: 1px solid green;
+}
+
+.home_group .content1 {
+  border: 1px solid green;
+  max-width: 900px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.home_equipment {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid green;
+}
+
+.home_equipment .content2 {
+  border: 1px solid green;
+  height: 750px;
+  margin: 50px auto 0;
+}
+
+.home_camping {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid green;
+}
+
+.home_camping .content3 {
+  border: 1px solid green;
+  height: 750px;
+  margin: 100px auto 0;
+}
+
+.home_letter {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid green;
+}
+
+.home_letter .content1 {
+  border: 1px solid green;
+  height: 750px;
+  margin: 0 auto;
 }
 
 .home_game {
   width: 100%;
   height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: contain;
-  background-position: center;
-  border: 1px solid red;
 }
 
 .home_game .game_table {
-  margin: 100px auto 0;
+  margin: 200px auto 0;
+  padding-top: 100px;
 }
 
 .home_game .game_table .game_title {
@@ -4103,6 +4217,7 @@ input[type="submit"], button {
   border-color: #00A5A3;
   border-width: 3px;
   font-weight: bold;
+  outline: none;
   position: relative;
   cursor: pointer;
 }
@@ -4129,6 +4244,7 @@ input[type="submit"], button {
   border-color: #00A5A3;
   border-width: 3px;
   font-weight: bold;
+  outline: none;
   position: relative;
   cursor: pointer;
 }
@@ -4155,6 +4271,7 @@ input[type="submit"], button {
   border-color: #00A5A3;
   border-width: 3px;
   font-weight: bold;
+  outline: none;
   position: relative;
   cursor: pointer;
 }
@@ -4181,6 +4298,7 @@ input[type="submit"], button {
   border-color: #00A5A3;
   border-width: 3px;
   font-weight: bold;
+  outline: none;
   position: relative;
   cursor: pointer;
 }
@@ -4207,6 +4325,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #00A5A3;
   font-weight: bold;
+  outline: none;
   cursor: pointer;
 }
 
@@ -4225,6 +4344,7 @@ input[type="submit"], button {
   border-width: 2px;
   border-color: #00A5A3;
   font-weight: bold;
+  outline: none;
   cursor: pointer;
 }
 
@@ -4278,6 +4398,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #70CACE;
   font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
@@ -4290,6 +4411,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #FFCD43;
   font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
@@ -4302,6 +4424,7 @@ input[type="submit"], button {
   border-radius: 5px;
   border-color: #C4C4C4;
   font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
