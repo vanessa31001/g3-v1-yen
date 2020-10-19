@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
@@ -125,6 +126,7 @@ table {
   border: 3px solid #00A5A3;
   background-color: white;
   color: #00A5A3;
+  cursor: pointer;
 }
 
 .search_input input:focus {
@@ -1241,6 +1243,7 @@ header div.nav_logo a.logo_link.-up {
 
 .nav_list ul li a {
   position: relative;
+  text-decoration: none;
 }
 
 .nav_list ul li a::after {
@@ -3224,29 +3227,25 @@ input[type="submit"], button {
   z-index: 1;
 }
 
-.homepage_bgcolor .homepage_bgpic {
-  background-image: url(../../pic/index/1019_BG-11.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 7;
-}
-
 .homepage_bgcolor .homepage_bgpic section {
   height: 750px;
 }
 
 .homepage_bgcolor .homepage_bgpic .home {
-  height: 900px;
+  margin: 0 auto;
+  border: 1px solid red;
+  background-image: url(../../pic/index/1020_首頁-11_頭.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  z-index: 7;
 }
 
 .home_group {
   width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 650px;
   border: 1px solid green;
 }
 
@@ -3254,38 +3253,127 @@ input[type="submit"], button {
   border: 1px solid green;
   max-width: 900px;
   width: 100%;
-  height: 500px;
+  height: 650px;
   margin: 0 auto;
 }
 
 .home_equipment {
   width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 650px;
   border: 1px solid green;
 }
 
 .home_equipment .content2 {
-  border: 1px solid green;
-  height: 750px;
+  border: 1px solid blue;
+  height: 650px;
   margin: 50px auto 0;
 }
 
 .home_camping {
   width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid green;
 }
 
 .home_camping .content3 {
-  border: 1px solid green;
-  height: 750px;
+  padding: 0 10px;
   margin: 100px auto 0;
+  z-index: 7;
+  position: relative;
+}
+
+.home_camping .content3 .home_camping_title {
+  padding-left: 15%;
+}
+
+.home_camping .content3 .home_map {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.home_camping .content3 .home_map .map {
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+}
+
+.home_camping .content3 .home_map .search_area {
+  border: 1px solid yellow;
+  margin: 10px auto;
+  border-bottom: 2px solid #C4C4C4;
+  max-width: 350px;
+  width: 100%;
+}
+
+.home_camping .content3 .home_map .search_area p {
+  margin: 10px 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.home_camping .content3 .home_map .search_area p label {
+  display: inline-block;
+  width: calc(100%-250px);
+}
+
+.home_camping .content3 .home_map .search_area p select {
+  width: 250px;
+  height: 30px;
+}
+
+.home_camping .content3 .home_map .infos {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px 0 20px 0;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+.home_camping .content3 .home_map .infos .NowT {
+  padding: 0 12px;
+}
+
+.home_camping .content3 .home_map .infos .NowT .TtoT {
+  color: #00A5A3;
+}
+
+.home_camping .content3 .home_map .infos .PoP {
+  vertical-align: center;
+  padding: 20px 8px;
+  color: #00A5A3;
+}
+
+.home_camping .content3 .home_map .infos .PoP p {
+  padding-top: 10px;
+  color: #007E85;
+}
+
+.home_camping .content3 .home_map .infos .RH {
+  vertical-align: center;
+  padding: 20px 8px;
+  color: #00A5A3;
+}
+
+.home_camping .content3 .home_map .infos .RH p {
+  padding-top: 10px;
+  color: #007E85;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .home_camping .content3 .home_map .map {
+    max-width: 345px;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home_camping .content3 .home_map {
+    display: block;
+  }
+  .home_camping .content3 .home_map .map {
+    max-width: 540px;
+    width: 100%;
+  }
 }
 
 .home_letter {
@@ -3304,13 +3392,20 @@ input[type="submit"], button {
 }
 
 .home_game {
-  width: 100%;
   height: 600px;
+  margin: 0 auto;
+  border: 1px solid peru;
+  background-image: url(../../pic/index/1020_首頁-12_尾.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  z-index: 7;
 }
 
 .home_game .game_table {
-  margin: 200px auto 0;
-  padding-top: 100px;
+  margin: 0px auto 0;
 }
 
 .home_game .game_table .game_title {
