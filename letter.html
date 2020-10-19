@@ -44,18 +44,12 @@
         //建立事件玲聽
         previousStep.addEventListener('click',changeStepBack);
         nextStep.addEventListener('click',changeStepNext);
-            paperList[0].addEventListener('click',function(){
+        for(let i =0; i<paperList.length; i++){
+            paperList[i].addEventListener('click',function(){
                 let paperPassId = this.id;
                 paperBackground(paperPassId);
             });
-            paperList[1].addEventListener('click',function(){
-                let paperPassId = this.id;
-                paperBackground(paperPassId);
-            });
-            paperList[2].addEventListener('click',function(){
-                let paperPassId = this.id;
-                paperBackground(paperPassId);
-            });
+        }
         
         
         //函式區

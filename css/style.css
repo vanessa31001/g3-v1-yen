@@ -3562,23 +3562,24 @@ input[type="submit"], button {
 }
 
 .wrap .postcard_content .postcard {
-  border: 1px solid red;
   margin-right: 15px;
   width: 840px;
   height: 560px;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
 }
 
 .wrap .postcard_content .postcard .pdContentImg {
-  width: 8%;
+  width: 15%;
   position: absolute;
   bottom: 0%;
-  left: 45%;
+  left: 43%;
   border-radius: 50%;
   padding: 15px 25px 15px 25px;
-  display: none;
+  display: block;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
 }
 
 .wrap .postcard_content .postcard .putPhoto {
@@ -3590,7 +3591,6 @@ input[type="submit"], button {
 }
 
 .wrap .postcard_content .rightPostcard {
-  border: 1px solid blue;
   width: 287px;
   height: 560px;
   background-image: url("../../pic/postcardMaterial/leftBackground.svg");
@@ -3685,31 +3685,49 @@ input[type="submit"], button {
   position: relative;
 }
 
+.cloud {
+  -webkit-animation: move 20s linear infinite;
+          animation: move 20s linear infinite;
+  z-index: 4;
+  position: relative;
+  top: 30vh;
+}
+
+@-webkit-keyframes move {
+  50% {
+    margin-left: 300px;
+  }
+}
+
+@keyframes move {
+  50% {
+    margin-left: 300px;
+  }
+}
+
+.homepage_bg {
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #AFDCDE;
+  background-image: url(../../pic/index/1019_BG-11.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 6;
+}
+
+.homepage_bg section {
+  height: 800px;
+}
+
+.homepage_bg .home {
+  height: 900px;
+}
+
 .home_group {
   width: 100%;
   height: 500px;
-  background-color: #f6f3ed;
-  background-image: url(../../pic/index/1018_pic-01.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.home_equipment {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #f6f3ed;
-  background-image: url(../../pic/index/1018_pic-02.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.home_camping {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #f6f3ed;
-  background-image: url(../../pic/index/1018_pic-03.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3717,13 +3735,12 @@ input[type="submit"], button {
 
 .home_game {
   width: 100%;
-  min-height: 100vh;
-  background-color: #f6f3ed;
-  background-image: url(../../pic/index/1018_pic-04.svg);
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: contain;
   background-position: center;
+  border: 1px solid red;
 }
 
 .home_game .game_table {
