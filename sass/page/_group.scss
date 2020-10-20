@@ -3,6 +3,8 @@
     box-sizing: border-box;
 }
 $grayColor3: #EFEFEF;
+
+
 //檢舉按鈕
 .reportbtn{
     background-color: $white; 
@@ -53,6 +55,9 @@ input[type="submit"], button{
         .level11{
             font-weight:bold;
         }
+        .level1, .level0{
+            font-weight:normal;
+        }
         a{
             text-decoration: none;
         }
@@ -62,33 +67,20 @@ input[type="submit"], button{
             }
         }
     }
-    //建立揪團
+    //建立揪團按鈕
     .startNewGroup{
         position: fixed;
         z-index: 1;
         right: -6px;
         top:80px;
         width: 200px;
+        .mainbtn1{
+            display: none;
+        }
         img{
             width: 100%;
         }
-        // .talk{
-        //     padding: 15px 30px;
-        //     color: $white;
-        //     background-color: $orangeColor2;
-        //     border-radius: 5px;
-        //     position: relative;
-        //     &::after{
-        //         content: "";
-        //         position: absolute;
-        //         border-color: $orangeColor2 $orangeColor2 transparent transparent;
-        //         border-style: solid solid solid solid;
-        //         border-width: 15px 10px 15px 10px;
-        //         bottom: -15px;
-        //         right: 30px;
 
-        //     }
-        //}
     }
     //側邊攔
     .nav{
@@ -117,7 +109,7 @@ input[type="submit"], button{
                     border-radius: 5px;
                 }
             }
-            .serchGroup:nth-child(2){
+            .serchGroup:nth-child(3){
                 border-top: 0px solid $grayColor1;    
             }
         }
@@ -134,7 +126,7 @@ input[type="submit"], button{
             width: 100%;
             border-radius: 10px 10px 0 0;
             overflow: hidden;
-            height: 550px;
+            // height: 550px;
             padding: 30px;
             position: relative;
             .hot{
@@ -158,7 +150,7 @@ input[type="submit"], button{
                 width:40%;
                 margin-right: 40px;   
                 display: inline-block;
-                height: 500px;
+                // height: 100%;
                 position: relative;
                 .groupBinImg{
                     // border: 1px solid red;
@@ -179,24 +171,23 @@ input[type="submit"], button{
                 .maphashtag{
                     margin: 30px 0 ;
                     input{
-                        margin-right: 15px;
+                        margin: 0 15px 0 0;
                     }
                 }
                 // .maphashtagI{
                 //     margin: 0px 0 ;
                 // }
                 .mainbtn1{
-                    position: absolute;
+                    // position: absolute;
                     width: 100%;
-                    bottom: 0;
-                    left: 0;
+                    // bottom: 0;
+                    // left: 0;
                 }
             }
             .gRight{
                 display: inline-block;
                 width: calc(100% - 40% - 45px);
                 vertical-align: top;
-                height: 500px;
                 overflow: hidden;
                 position: relative;
                 color: $grayColor1;
@@ -282,18 +273,24 @@ input[type="submit"], button{
                 }
                 .equthing{
                     margin: 0 0 25px ;
-                    .equ{
-                        display: inline-block;
-                        margin: 0;
-                        margin-right: 15px;
+                    div{
+                        display: inline;
+                        .equ{
+                            display: inline-block;
+                            margin: 0;
+                            margin-right: 15px;
+                        }
                     }
 
                 }
-                .more{
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
+            }
+            .more{
+                display: flex;
+                justify-content: space-between; 
+                .mainbtn1{
+                    width: 40%;
                 }
+
             }
         }
         .ginside{
@@ -302,9 +299,10 @@ input[type="submit"], button{
         .msg{
             display: block;
             border-radius: 0 0 10px 10px;
-            height: 120px;
+
             padding: 10px 30px;
             background-color: $grayColor3;
+            overflow: hidden;
             .third_title{
                 margin-bottom: 10px;
                 display: block;
@@ -338,6 +336,7 @@ input[type="submit"], button{
                     flex:1;
                     margin: 0 40px;
                     span{
+                        vertical-align: top;
                         display: inline-block;
                         font-weight: bold;
                         padding-right:10px ;
@@ -356,7 +355,7 @@ input[type="submit"], button{
     .gPepole{
         background-color: $white;
         padding: 30px;
-        margin: 30px 0;
+        margin: 30px 0 0;
         border-radius: 10px;
         
         .inform_block{  
@@ -364,6 +363,7 @@ input[type="submit"], button{
             display: inline-block; 
             width: calc((100% - 30px )/ 4 ); 
             margin-right: 10px; 
+            margin-bottom: 10px;
             &:last-child{
                 margin-right: 0px; 
             }  
@@ -396,6 +396,10 @@ input[type="submit"], button{
             align-items: center;
             justify-content: space-between;
             padding: 30px;
+            border-bottom: 2px solid $greenColor3;
+            &:last-child{
+                border-bottom: 0px solid $greenColor3;
+            }
             .inform_pic{
                 // vertical-align: middle;
                 width:46px;
@@ -430,14 +434,16 @@ input[type="submit"], button{
         }
     }
     .myMsg{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .text{
-            flex:1;
-            margin:0 30px;
+        text-align: center;
+        margin-top: 30px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-around;
+        textarea{
+            vertical-align: middle;
             font-size: 16px;
             padding: 10px;
+            width: 80%;
             border: 3px solid $greenColor3;
             border-radius: 10px;
 
@@ -502,7 +508,7 @@ input[type="submit"], button{
                             .maphashtagI{
                                 display: inline-block;
                                 input{
-                                    margin: 0 10px;
+                                    margin: 10px 10px 0 0;
                                 }
                             }
                             .more{
@@ -561,13 +567,43 @@ input[type="submit"], button{
         .left{
             width: 49%;
             padding-right: 45px;
-            border-right: 3px solid $greenColor3;
-            display: inline-block;    
+            display: inline-block; 
+            .maphashtag{
+                margin: 30px 0 ;
+                input{
+                    margin: 10px 15px 0 0;
+                }
+            }  
+
         }
         .right{
             width: 50%;
             padding-left: 45px;
             display: inline-block;
+            vertical-align: top;
+            border-left: 3px solid $greenColor3;
+            table{
+                margin: 10px 0;
+                height: 300px;
+                border-collapse: collapse;
+                // border:1px solid red;
+                width: 100%;
+                td{
+                    // border:1px solid red; 
+                    vertical-align: middle;
+                }
+                .textinfo{
+                    vertical-align: text-top;
+                }
+                input[type="text"], textarea{
+                    width: 100%;
+                }
+                input, select, textarea {
+                    border: 1px solid $greenColor3;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+            }
             .btn{
                 width: 100%;
                 font-size: 0;
@@ -577,68 +613,459 @@ input[type="submit"], button{
                     margin:5px;
                 }
             }
-        }   
-    }
-    .pic{
-        margin: 10px auto;
-        font-size: 0;
-        vertical-align: middle;
-        .uploadImg{
-            display: inline-block;
-            border: 3px solid $greenColor3;
-            width: 100%;
-            height: 250px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 10px;
-            text-align: center;
-            // font-size: 16px;
-            cursor: pointer;
-            img{
-                display: block;
-                width: 45%;
-                margin: 30px auto 10px;
-            }
-            #theFile{
-                display:none;
-            }
-            
-        }
-        .uploadImgI{
-            border: 0;
-            .nowPic{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        .ginsideImg{
-            cursor: default;
-        }
-        .imgs{
-            font-size: 0;
-            .img{
-                width: 100px;
-                height: 100px;
-                margin-right: 10px;
-                display: inline-block;
-                vertical-align: middle;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;    
+        }  
+        .checkright{
+                .headLine{
+                    display: flex;
+                    // flex-wrap: wrap;
+                    justify-content:space-between;
+                    // align-items:center; 
+                    H3{
+                        margin: 0;
+                        vertical-align: top;
+                        display: inline-block;
+                        line-height: 28px;
+                    }
+                    .smallInfo{
+                        text-align: right;
+                        display: inline-block;
+                        H6{
+                            font-weight:normal;
+                            margin: 0 0 10px;
+                        }
+                    }
+                }
+                p{
+                    margin: 0 0 10px ;
+                    font-size: 16px;
+                    line-height: 25px;
+                    font-weight: 30px;
+                }
+                .info{
+                    height: 70px;
+                    overflow: hidden;
+                }
+                .infomore{
+                    height: auto;
+                }
+                span{
+                    color: $greenColor1;
+                }
+                //會員資訊
+                .poster_inform{
+                    border: 1px solid $greenColor3;
+                    border-radius: $radius;
+                    padding: 10px 20px;
+                    margin: 0 0 10px;
+                    .poster{
+                        // margin: 0 10px;
+                        padding:0 10px;
+                    }
+                    .inform_block{        
+                        .inform_pic{
+                            vertical-align: middle;
+                            width:46px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            margin-right: 15px;
+                            display: inline-block;
+                            img{
+                                width:100%;
+                            }
+                        }
+                        .inform_text{
+                            vertical-align: middle;
+                            display: inline-block;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .aboutPepole{
+                    // display: flex;
+                    // // justify-content:space-between;
+                    // align-items:center ;
+                    p{
+                        display: inline-block;
+                    }
+                    .note{
+                        padding-left: 30px ;
+                        color: $orangeColor2;
+                    }
+
+
+                }
+                .equthing{
+                    margin: 0 0 25px ;
+                    div{
+                        display: inline;
+                        .equ{
+                            display: inline-block;
+                            margin: 0;
+                            margin-right: 15px;
+                        }
+                    }
+
+                }
+                .more{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                 }
             }
-            // .now{
-            //     border: 5px solid $greenColor3;
-            //     text-align: left;  
-            //     font-size: 0;
-            // }
+        
+    }
+    .group{
+        .pic{
+            margin: 10px auto;
+            font-size: 0;
+            vertical-align: middle;
+            .uploadImg{
+                display: inline-block;
+                border: 3px solid $greenColor3;
+                width: 100%;
+                height: 250px;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 10px;
+                text-align: center;
+                // font-size: 16px;
+                cursor: pointer;
+                img{
+                    display: block;
+                    width: 45%;
+                    margin: 30px auto 10px;
+                }
+                #theFile{
+                    display:none;
+                }
+                
+            }
+            .uploadImgI{
+                border: 0;
+                border-radius: 10px;
+                overflow: hidden;
+                .nowPic{
+                    width: 100%;
+                    margin: 0;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .ginsideImg{
+                cursor: default;
+            }
+            .imgs{
+                font-size: 0;
+                .img{
+                    width: 100px;
+                    height: 100px;
+                    margin: 10px 10px 0 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover; 
+                            
+                    }
+                }
+                .now{
+                    border: 5px solid $greenColor3;
+                    text-align: left;  
+                    font-size: 0;
+    
+                }
+            }
+        }
+        .picI{
+            .imgs{
+                cursor: pointer;
+            }
         }
     }
-    .picI{
-        .imgs{
-            cursor: pointer;
+    
+    
+    
+@media screen and (max-width: 1199px){
+    .startNewGroup{
+        width:130px;
+    }
+    .groupMain{
+        .nav{
+            font-size: 0;
+            width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+            h2{
+                display: inline;
+
+            }
+            .serchGroup{
+                vertical-align: top;
+                margin: 0 30px;
+                h3{
+                    display: inline-block;
+                    width: calc(100% / 5);
+                }
+                select{
+                    display: inline-block;
+                    margin:0;
+                }
+                label{
+                    display: inline-block;
+                    width: calc(100% / 5);
+                    margin:0;
+                    font-size: 16px;
+                }
+                
+            }
+        }
+        .groups{
+            width: 100%;
         }
     }
-// }
+    // .groupBlockI{
+        .group{
+            height: auto;
+            .pic .imgs .img{
+                width:60px;
+                height:60px;
+            }
+        }
+    // }
+    .moreGroups .oGroups{
+        width: 460px;
+    }
+    
+}
+@media screen and (max-width: 991px){
+    .groupMain{
+        .group {
+            .gRight{
+                .headLine{
+                    display: block;
+                    h3{
+                        display: block;
+                        margin-bottom: 10px;
+                        // width: 100%;
+                    }
+                    .smallInfo{
+                        // width: 100%;
+                        text-align: left;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h6,input{
+
+                            margin: 0 ;
+                        }
+                    }
+                }
+            }
+        }  
+        .groupBlock{
+            .msg{
+                .msgInfo{
+                    display: block;
+                    position: relative;
+                    div{
+                        margin: 10px 0;
+                    }
+                    .level0{
+                        position: absolute;
+                        right: 0;
+                        top:0;
+                    }
+                }
+            }
+        }      
+    }
+    .gPepole{
+        .inform_block{
+            text-align: center;
+        }
+    }
+    .groupNewStart {
+        .checkright{
+            .equthing{
+                div{
+                    display: block;
+                    .equ{
+                        margin:5px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 767px){
+    .groupMain{
+        .nav{
+            .serchGroup{
+                label, select{
+                    display: inline;
+                    margin-right: 5px ;
+                }
+                
+            }
+        }
+        .groupBlock{
+            .group {
+                // height: 600px;
+                .gLeft{
+                    .maphashtag {
+                        input{
+                            margin: 15px 0 0 ;
+                        }
+                    }
+                }
+                .gRight{
+                    .aboutPepole{
+                        display: block;
+                        .right{
+                            width: 100%;
+                            text-align:left
+                        }
+                    }
+                    .equthing{
+                        div{
+                            display: block;
+                        }
+                    }
+                }
+        }
+        }
+        
+        .ginside{
+            height: auto;
+            .mainbtn1{
+                width: 100%;
+            }
+        }
+    }
+    .gPepole{
+        .inform_block{
+            text-align: left;
+            display: block;
+            width: auto;
+        }
+        .msgInfo{
+            text-align: left;
+            display: block;
+            width: auto;
+            .level0{
+                display: inline-block;
+                margin: 10px 10px 0 0;
+            }
+        }
+    }
+    section.section2:nth-child(5){
+        display: none;
+    }
+    .groupNewStart {
+        display: flex;
+        flex-direction: column;
+        .left{
+            width: 100%;
+            padding: 0;
+        }
+        .right{
+            width: 100%;
+            padding: 0;
+            border: 0;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .grouninfostyle{
+        display: flex;
+        justify-content: space-between;
+    }
+    .startNewGroup{
+        position: static;
+        .mainbtn1{
+            display: block;
+            width: 100%;
+            margin: 0 0 10px;
+        }
+        img{
+            display: none;
+        }
+
+    }
+    .groupMain{
+        .nav{
+            .serchGroup{
+                margin: 0;
+                h3{
+                    display: block;
+                    width: auto;
+                }
+                label{
+                    display: inline-block;
+                    margin-right: 5px ;
+                    width: 110px;
+                }
+                
+            }
+        }
+        .group {
+            height: auto;
+            .gLeft{
+              width: 100%;
+              height: auto;
+              margin: 0;  
+              .mainbtn1 {
+                  position: relative;
+                  margin-bottom: 30px;
+              }
+            }
+            .gRight{
+                width: 100%;
+                height: auto;
+                margin: 0;
+                .equthing{
+                    div{
+                        .equ{
+                            margin:5px;
+                        }
+                    }
+                }
+                .secondbtn1{
+                    position: relative;
+                //   margin-bottom: 30px;
+                }
+            }
+            .more{
+                display: block;
+                .mainbtn1{
+                    display: inline-block;
+                    width: 300px;
+                }
+                .secondbtn1{
+                    display: inline-block;
+                    margin: 15px 0 0 0;
+                }
+            }
+        }
+
+        
+        .groupBlock{
+            .msg{
+                .msgInfo{
+
+                    .level0{
+                        position: relative;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+}

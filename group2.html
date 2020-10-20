@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>揪團露營</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script> 
-    <script src="./vender/vue.min.js"></script>
+    <script src="./vender/vue/vue.min.js"></script>
     <script src="./vender/jquery/jquery-3.5.1.min.js"></script>
     <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="groupAllList">
         <header >
             <div class="forphone">
             <button class="hamburger hamburger--spring" type="button">
@@ -27,11 +27,11 @@
                     <a href="#" class="logo_link -bottom">
                         <img class="desk sun" src="./pic/commom/太陽.svg" alt="">
                     </a>
-                    <a class="changelogo" href="./index.html">
+                    <a class="changelogo" href="./shansen.html">
                     <img class="phone" src="./pic/commom/手機_header.svg">
                     </a>
                     <div class="middle_bg"></div>
-                    <a href="./index.html" class="logo_link -up">
+                    <a href="./shansen.html" class="logo_link -up">
                         <img class="desk" src="./pic/commom/電腦版_header.svg">
                     </a>
                 </div>
@@ -59,10 +59,10 @@
                         <li class="level0 gray1">揪團露營</li>
                     </ul>
                 </div>
-                <a href="./groupNewStart.html" class="startNewGroup level5"><img src="./pic/group/newgroup-01.svg" alt=""></a>
                 <div class="groupMain">
                     <div class="nav">
-                         <h2 class="level7 green1">自訂篩選</h2>
+                        <a href="./groupNewStart.html" class="startNewGroup"><button class="mainbtn1">我要開團</button><img src="./pic/group/newgroup-01.svg" alt=""></a>
+                        <h2 class="level7 green1">自訂篩選</h2>
                          <div class="serchGroup">
                             <h3 class="level2 green1">選擇地區</h3> 
                             <select class= "gray1" name="loca">
@@ -139,9 +139,11 @@
                                     </div>
                                     <div class="equthing">
                                         須具備設備 :
-                                        <a href="#" v-for="equ in equs" class="equ">
-                                            <button class="tagbtn_yellow">{{equ}}</button>
-                                        </a>
+                                        <div>
+                                            <a href="#" v-for="equ in equs" class="equ">
+                                                <button class="tagbtn_yellow">{{equ}}</button>
+                                            </a>
+                                        </div>
                                         <p class="gray2">
                                             (標籤可到設備交換區)
                                         </p>
@@ -228,7 +230,7 @@
     </div>
     <script>
         new Vue({
-            el: '#app',
+            el: '#groupAllList',
             data: {  
                 citys: ['全部地區','北部','中部','南部','東部'],       // 變數存放的地方
                 people: ['不限','1~4人','5~8人','9人以上'],
