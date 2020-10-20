@@ -20,26 +20,26 @@
             </button>
             </div>
             <nav class="wrap">
-                <div class="nav_logo">
+                <div href="#" class="nav_logo">
                     <a href="#" class="logo_link -bottom">
                         <img class="desk sun" src="./pic/commom/太陽.svg" alt="">
                     </a>
-                    <a class="changelogo" href="./shansen.html">
+                    <a class="changelogo" href="#">
                     <img class="phone" src="./pic/commom/手機_header.svg">
                     </a>
                     <div class="middle_bg"></div>
-                    <a href="./shansen.html" class="logo_link -up">
+                    <a href="#" class="logo_link -up">
                         <img class="desk" src="./pic/commom/電腦版_header.svg">
                     </a>
                 </div>
                 <div class="nav_list">
                     <ul >
-                        <li><a class="nav_title" href="./group.html">揪團露營</a></li>
-                        <li><a class="nav_title  orange2" href="./equipment.html">設備交換</a></li>
-                        <li><a class="nav_title" href="./camping.html">營區攻略</a></li>
-                        <li><a class="nav_title" href="./letter.html">來去寫信</a></li>
-                        <li><a class="nav_title" href="./aboutus.html">關於我們</a></li>
-                        <li><a class="nav_title" href="./member.html">登入|註冊</a></li>
+                        <li><a class="nav_title" href="#">揪團露營</a></li>
+                        <li><a class="nav_title" href="#">設備交換</a></li>
+                        <li><a class="nav_title" href="#" >營區攻略</a></li>
+                        <li><a class="nav_title" href="#">來去寫信</a></li>
+                        <li><a class="nav_title" href="#">關於我們</a></li>
+                        <li><a class="nav_title" href="#">登入|註冊</a></li>
                     </ul>
                 </div>
             </nav>
@@ -54,7 +54,7 @@
 
                 <div class="breadcrumbs">
                     <ul>        
-                        <li><a href="#" class="level0 green1">設備交換</a></li>
+                        <li><a href="equipment_all.html" class="level0 green1">設備交換</a></li>
                         <li class="level0 gray1">所有商品</li>
                     </ul>    
                 </div>
@@ -108,35 +108,40 @@
                     </div>  
                 </div>
 
-                <div class="equ_partcontainer">
+                <div class="equ_container">
                     <div class="equbar">
                         <div class="nav">
-                            <div class="post_btn">
-                                <button class="secondbtn1">我要刊登商品</button>
+                            <div class="title_btn_block">
+                                <div class="equipment_select_title">
+                                <h2 class="level7 green1">搜尋設備</h2>
+                                </div>
+                                <div class="post_btn">
+                                    <button class="secondbtn1">我要刊登商品</button>
+                                </div>
                             </div>
-                            <hr>
+                            <!-- <hr> -->
                             <div class="equlist_block">
                                 <div class="equlist">
-                                    <img src="pic/equipment/icon01.png" alt="">                   
+                                    <!-- <img src="pic/equipment/icon01.png" alt="">                    -->
                                     <h3>
                                     <a class="level2 green1" href="">所有商品</a></h3>
                                 </div>        
                                 <div class="equlist">                   
                                     <h3>
                                     <a  class="level2 green1" href="">露營帳篷</a></h3>
-                                    <div v-for="tent in tents"><a class="level2 gray1" href="">{{tent}}</a></div>    
+                                    <div v-for="tent in tents"><a class="level2 gray1 minsorts" href="">{{tent}}</a></div>    
                                 </div>
                                 <hr>        
                                 <div class="equlist">                   
                                     <h3>
                                     <a class="level2 green1" href="">睡袋</a></h3>
-                                    <div v-for="sbag in sbags"><a class="level2 gray1" href="">{{sbag}}</a></div>    
+                                    <div v-for="sbag in sbags"><a class="level2 gray1 minsorts" href="">{{sbag}}</a></div>    
                                 </div>  
                                 <hr>      
                                 <div class="equlist">                   
                                     <h3>
                                     <a class="level2 green1" href="">其他</a></h3>
-                                    <div v-for="other in others"><a class="level2 gray1" href="">{{other}}</a></div>    
+                                    <div v-for="other in others"><a class="level2 gray1 minsorts" href="">{{other}}</a></div>    
                                 </div>
                             </div>
                             
