@@ -4284,7 +4284,6 @@ input[type="submit"], button {
 }
 
 .app_anyway {
-  width: 1140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4372,6 +4371,45 @@ input[type="submit"], button {
   cursor: pointer;
 }
 
+.member_message_title {
+  text-align: left;
+}
+
+.member_message_Title_img {
+  width: 60px;
+}
+
+.member_message_alldetail {
+  border: 3px solid #007E85;
+}
+
+.member_message_alldetail .member_message_detail {
+  border: 1px solid #007E85;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.member_message_alldetail .member_message_detail img {
+  width: 150px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.member_message_alldetail .message_edit_block {
+  margin-bottom: 10px;
+}
+
+.member_message_alldetail .message_edit_block button {
+  cursor: pointer;
+}
+
 .member_Group_detail {
   text-align: left;
 }
@@ -4396,16 +4434,6 @@ input[type="submit"], button {
   border-radius: 8px;
 }
 
-.unlockRow::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .group_everyRow img {
   width: 200px;
 }
@@ -4423,6 +4451,404 @@ input[type="submit"], button {
 .group_everyRow ul li {
   margin: 0;
   text-align: left;
+}
+
+.group_everyRow button {
+  min-width: 66px;
+}
+
+.unlockRow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.group_page {
+  text-align: center;
+  padding: 0;
+}
+
+.group_page li {
+  display: inline-block;
+}
+
+.group_page li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #007e85;
+}
+
+.Equipment_record_page .Equipment_record li {
+  margin: 16px 0;
+  position: relative;
+}
+
+.Equipment_record_page .Equipment_record li * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Equipment_record_page .Equipment_record li img {
+  width: 130px;
+}
+
+.Equipment_record_page .Equipment_record li :first-child {
+  width: 10%;
+}
+
+.Equipment_record_page .Equipment_record li :nth-child(2) {
+  width: 30%;
+}
+
+.Equipment_record_page .Equipment_record li :nth-child(3) {
+  width: 40%;
+  text-align: left;
+}
+
+.Equipment_record_page .Equipment_record li :last-child {
+  width: 15%;
+}
+
+.Equipment_record_page .Equipment_record li:first-child {
+  background-color: #FFAE08;
+}
+
+.Equipment_record_page .Equipment_record li:first-child :nth-child(3) {
+  text-align: center;
+}
+
+.lookEquipment::after {
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.group_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.publicationRecord {
+  font-size: 18px;
+  color: #626262;
+  border: 1px solid black;
+}
+
+.publicationRecord th {
+  background-color: #FFAE08;
+}
+
+.publicationRecord tr {
+  position: relative;
+  height: 150px;
+}
+
+.publicationRecord tr td {
+  font-size: 16px;
+  padding: 0;
+  line-height: 16px;
+  border: 1px solid black;
+  vertical-align: middle;
+}
+
+.publicationRecord tr td img {
+  width: 150px;
+}
+
+.publicationRecord tr td:nth-child(3) {
+  width: 50%;
+  text-align: left;
+  padding: 0 16px;
+}
+
+.camptotal_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.campItem {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  position: relative;
+}
+
+.campItem img {
+  width: 100%;
+}
+
+.campItem div {
+  text-align: left;
+  padding: 8px;
+}
+
+.campItem span {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+}
+
+.campItem span img {
+  width: 30px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .app_anyway {
+    display: block;
+  }
+  .app_anyway .app_left_aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .app_anyway .app_left_aside .aside_subtitle {
+    display: none;
+  }
+  .app_anyway .app_right_aside {
+    width: 100%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_information_main {
+    width: 45%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_image > img, .app_anyway .app_right_aside .member_information_detail .member_imageButton {
+    display: block;
+    margin: 0 auto;
+  }
+  .app_anyway .app_right_aside .camptotal_page {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .app_anyway {
+    display: block;
+  }
+  .app_anyway .app_left_aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .app_anyway .app_left_aside .aside_subtitle {
+    display: none;
+  }
+  .app_anyway .app_left_aside .buttonClassification {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .app_anyway .app_left_aside .buttonClassification img {
+    cursor: pointer;
+  }
+  .app_anyway .app_left_aside .buttonClassification button {
+    margin: 0;
+  }
+  .app_anyway .app_right_aside {
+    width: 100%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_information_main {
+    width: 45%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_image > img, .app_anyway .app_right_aside .member_information_detail .member_imageButton {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .app_anyway {
+    display: block;
+  }
+  .app_anyway .app_left_aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .app_anyway .app_left_aside .aside_subtitle {
+    display: none;
+  }
+  .app_anyway .app_left_aside .buttonClassification img {
+    cursor: pointer;
+  }
+  .app_anyway .app_left_aside .buttonClassification button {
+    display: none;
+  }
+  .app_anyway .app_right_aside {
+    width: 100%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_information_main {
+    width: 60%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_image > img, .app_anyway .app_right_aside .member_information_detail .member_imageButton {
+    display: block;
+    margin: 0 auto;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail {
+    border: 3px solid #007E85;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .member_message_detail {
+    display: inline-block;
+    padding: 32px;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .member_message_detail img {
+    width: 150px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .message_edit_block {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .message_edit_block button {
+    cursor: pointer;
+  }
+  .app_anyway .app_right_aside .Equipment_record_page .Equipment_record li img {
+    width: 100%;
+  }
+  .app_anyway .app_right_aside .Equipment_record_page .Equipment_record li :first-child {
+    width: 20%;
+  }
+  .app_anyway .app_right_aside .Equipment_record_page .Equipment_record li :nth-child(2) {
+    width: 50%;
+  }
+  .app_anyway .app_right_aside .Equipment_record_page .Equipment_record li :nth-child(3) {
+    display: none;
+  }
+  .app_anyway .app_right_aside .Equipment_record_page .Equipment_record li :last-child {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app_anyway {
+    display: block;
+  }
+  .app_anyway .app_left_aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .app_anyway .app_left_aside .aside_subtitle {
+    display: none;
+  }
+  .app_anyway .app_left_aside .buttonClassification img {
+    cursor: pointer;
+  }
+  .app_anyway .app_left_aside .buttonClassification button {
+    display: none;
+  }
+  .app_anyway .app_right_aside {
+    width: 100%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_information_main {
+    width: 80%;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_information_main span {
+    display: block;
+    border-bottom: 1px solid #70c9ce7c;
+    word-break: break-all;
+  }
+  .app_anyway .app_right_aside .member_information_detail .member_image > img, .app_anyway .app_right_aside .member_information_detail .member_imageButton {
+    display: block;
+    margin: 0 auto;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail {
+    border: 3px solid #007E85;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .member_message_detail {
+    display: inline-block;
+    padding: 16px;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .member_message_detail img {
+    width: 150px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .message_edit_block {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .app_anyway .app_right_aside .member_message_alldetail .message_edit_block button {
+    cursor: pointer;
+  }
+  .app_anyway .group_everyRow {
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+  .app_anyway .group_everyRow img {
+    width: 100%;
+  }
+  .app_anyway .group_everyRow ul {
+    height: auto;
+    padding: 0;
+    width: 100%;
+  }
+  .app_anyway .group_everyRow ul li {
+    text-align: left;
+  }
+  .app_anyway .group_everyRow button {
+    text-align: center;
+  }
+  .app_anyway .Equipment_record_page .Equipment_record li img {
+    width: 100%;
+  }
+  .app_anyway .Equipment_record_page .Equipment_record li :first-child {
+    display: none;
+  }
+  .app_anyway .Equipment_record_page .Equipment_record li :nth-child(2) {
+    width: 60%;
+  }
+  .app_anyway .Equipment_record_page .Equipment_record li :last-child {
+    width: 30%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
