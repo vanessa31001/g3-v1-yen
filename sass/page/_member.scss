@@ -9,6 +9,7 @@
 .app_left_aside{
     width: 30%;
     background-color: white;
+    border-radius: 10px 0 0 10px;
     padding: 16px;
 }
 .buttonClassification{
@@ -36,50 +37,63 @@
     width: 70%;
     padding: 14px;
     background-color: white;
+    border-radius: 0 10px 10px 0;
+}
+.app_left_aside_selector{
+    display: none;
+    // background-color: #007E85;
+    text-align: center;
+    margin: 16px 0;
+    select{
+        width: 90%;
+        border: 3px solid #007E85;
+        height: 45px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
 }
 .member_information_title{
     text-align: left;
-}
-.memberTitle_img{
+    .memberTitle_img{
     width: 60px;
+    }
 }
-.member_image{
-    text-align: center;
-    margin: 36px 0;
+.member_information_detail{
+    .member_image{
+        text-align: center;
+        margin: 36px 0;
+        img{
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .member_imageButton{
+            display: inline-block;
+            button{
+                cursor: pointer; 
+            }
+        }
+    }
 }
-.member_image > img, .member_imageButton{
-    display: inline-block;
-}
-.member_image > img{
-    border-radius: 50%;
-}
-.member_imageButton > button{
-    cursor: pointer; 
-}
+
 .member_information_main{
     margin: 0 auto;
     width: 50%;
     text-align: left;
-}
-.member_information_main  span{
-    margin-left: 16px;
-}
-.edit_block{
-    text-align: center;
-}
-.edit_block > button{
-    cursor: pointer; 
+    span{
+        margin-left: 16px;
+    }
+    .edit_block{
+        text-align: center;
+    }
+    button{
+        cursor: pointer; 
+    }
+    
 }
 
 
 //悄悄話
-.member_message_title{
-    text-align: left;
-}
-.member_message_Title_img{
-    width: 60px;
-}
-
 .member_message_alldetail{
     border: 3px solid #007E85;
     .member_message_detail{
@@ -107,47 +121,54 @@
 .member_Group_detail{
     text-align: left;
 }
-.startGroupManage_page > ul{
-    padding: 16px;
-}
-.group_everyRow{
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    align-items: center;
-    height: 150px;
-    margin: 16px 0 ;
-    background-color: white;
-    padding: 16px;
-    border-radius: 8px;
-    img{
-        width: 200px;
-    }
+.startGroupManage_page{
     ul{
-        line-height: 0;
-        height: auto;
-        font-size: 0;
-        display: block;
-        text-align: left;
-        width: 60%;
-        padding-left: 32px;
-        li{
-            margin: 0;
-            text-align: left;
+        padding: 16px;
+        .group_everyRow{
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+            height: 150px;
+            margin: 16px 0 ;
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            img{
+                width: 200px;
+            }
+            ul{
+                line-height: 0;
+                height: auto;
+                font-size: 0;
+                display: block;
+                text-align: left;
+                width: 60%;
+                padding-left: 32px;
+                li{
+                    margin: 0;
+                    text-align: left;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            button{
+                min-width: 66px;
+            }
+        }
+        .unlockRow::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: .4);
         }
     }
-    button{
-        min-width: 66px;
-    }
-}
-.unlockRow::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba($color: #000000, $alpha: .4);
 }
 
 .group_page{
@@ -169,15 +190,18 @@
         li{
             margin: 16px 0;
             position: relative;
+            width: 100%;
             *{
                 display: inline-block;
                 vertical-align: middle;
+                text-align: center;
             }
             img{
                 width: 130px;
             }
             :first-child{
                 width: 10%;
+
             }
             :nth-child(2){
                 width: 30%;
@@ -198,16 +222,17 @@
             }
         }
     }
+    .lookEquipment::after{
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: .4);
+    }
 }
-.lookEquipment::after{
-    content: '';
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    background-color: rgba($color: #000000, $alpha: .4);
-}
+
 
 //設備交換
 .group_button{
@@ -360,11 +385,13 @@
                 display: none;
             }
             .buttonClassification{
+                flex-direction: column;
+                justify-content: flex-end;
                 img{
                     cursor: pointer;
                 }
                 button{
-                    display: none;
+                    margin: 0;
                 }
             }
         }
@@ -423,6 +450,18 @@
                     }
                 }
             }
+            .group_everyRow{
+                img{
+                    width: 100px;
+                }
+                ul{
+                    width: 80%;
+                    padding: 0;
+                    li{
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
 
@@ -431,21 +470,26 @@
     .app_anyway{
         display: block;
         .app_left_aside{
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            border-bottom: 1px solid black;
-            .aside_subtitle{
-                display: none;
-            }
-            .buttonClassification{
-                img{
-                    cursor: pointer;
-                }
-                button{
-                    display: none;
-                }
-            }
+            display: none;
+            // justify-content: space-around;
+            // width: 100%;
+            // border-bottom: 1px solid black;
+            // .aside_subtitle{
+            //     display: none;
+            // }
+            // .buttonClassification{
+            //     flex-direction: column;
+            //     justify-content: flex-end;
+            //     img{
+            //         cursor: pointer;
+            //     }
+            //     button{
+            //         margin: 0;
+            //     }
+            // }
+        }
+        .app_left_aside_selector{
+            display: block;
         }
         .app_right_aside{
             width: 100%;
@@ -469,6 +513,8 @@
                 .member_message_detail{
                     display: inline-block;
                     padding: 16px;
+                    text-align: center;
+                    width: calc(100% - 20px);
                     img{
                         width: 150px;
                         border-radius: 50%;
@@ -481,6 +527,7 @@
                     justify-content: space-around;
                     button{
                         cursor: pointer;
+                        min-width: 66px;
                     }
                 }
             }
@@ -491,7 +538,7 @@
             height: auto;
             text-align: center;
             img{
-                width: 100%;
+                display: none;
             }
             ul{
                 height: auto;
@@ -509,6 +556,7 @@
         .Equipment_record_page{
             .Equipment_record{
                 li{
+                    padding: 8px;
                     img{
                         width: 100%;
                     }
@@ -527,4 +575,13 @@
         }
     }
 
+}
+@media screen and (max-width: 1199px){
+    .app_left_aside{
+        border-radius: 10px 10px 0 0;
+    }
+    .app_right_aside{
+
+        border-radius: 0 0 10px 10px;
+    }
 }

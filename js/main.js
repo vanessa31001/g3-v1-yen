@@ -9,7 +9,7 @@ $(function(){
 
 // 首頁滑鼠移動效果
 $(function() {
-    var $el = $('.home');
+    var $el = $('.tent');
     var mousePos = {};
     var boxCenter = {
         x: $el.outerWidth() / 2,
@@ -27,7 +27,7 @@ $(function() {
         var moveX = bgPos + (x / 14);
         var moveY = bgPos + (y / 14);
         $el
-        .css('background-size', '110%')
+        .css('background-size', '100%')
         .css('background-position', moveX +'% ' + moveY +'%');
     })
     .mouseleave(function() {
@@ -35,3 +35,6 @@ $(function() {
         .css('background-size', '100%');
     });
 });
+
+
+

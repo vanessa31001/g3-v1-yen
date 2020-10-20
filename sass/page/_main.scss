@@ -52,22 +52,86 @@
     border: 1px solid red;
     z-index: 1;
     .homepage_bgpic{
-        section{
-            height: 750px;
-        }
         .home{
-        margin: 0 auto;
-        border:1px solid red;
-        background-image: url(../../pic/index/1020_首頁-11_頭.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        width: 100%;
-        z-index: 7;
+            height: 750px;
+            margin: 0 auto;
+            border:1px solid blue;
+            background-image: url(../../pic/index/1020_bg_pic.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            z-index: 5;
+            .tent{
+                height: 750px;
+                margin: 0 auto;
+                border:1px solid blue;
+                background-image: url(../../pic/index/1020_bg_tent.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                width: 100%;
+                z-index: 6;
+            }
+            .wrap{
+                .home_first{
+                    max-width: 250px;
+                    width: 100%;
+                    img{
+                        position: absolute;
+                        top: 30vh;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
         }
     }
 }
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .homepage_bgcolor{
+        .homepage_bgpic{
+            .home{
+                .wrap{
+                    .home_first{
+                        img{
+                            max-width: 200px;
+                            top: 32vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+
+    //形象
+    .homepage_bgcolor{
+        .homepage_bgpic{
+            .home{
+                .wrap{
+                    .home_first{
+                        img{
+                            max-width: 130px;
+                            top: 35vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
 //揪團
 .home_group{
     width: 100%;
@@ -82,20 +146,188 @@
     }
 }
 
+
 //設備交換
 .home_equipment{
     width: 100%;
-    height: 650px;
+    // height: 650px;
     border: 1px solid green;
     .content2{
         border: 1px solid blue;
-        height: 650px;
-        margin: 50px auto 0;
+        // height: 650px;
+        margin: 0px auto;
+        .desc_search_block{
+            display: flex;
+            .home_equ_desc{
+                width: 400px;
+                margin: 30px 150px 0 0;
+            }
+        }
+        .home_equ_step{
+            margin: 20px 0 20px 0;
+            display: flex;
+            justify-content: center;
+            .equ_step01{
+                .equ_step01_num{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    color: $white;
+                    background-color: $yellowColor1;
+                    p{
+                        font-size: 36px;
+                        text-align: center;
+                        padding: 10px;
+                    
+                    }
+                }
+                .equ_step01_desc{
+                    p{
+                        font-size: 18px;
+                        margin-top: 30px;
+                    }
+                }
+                .equ_step_line{
+                    border: 1px solid $greenColor1;
+                    width: 120px;
+                    margin: 0 30px 0 30px;
+                }
+            }
+        }
+    }
+}
+
+.equ_step01_num , .equ_step_line{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .home_equipment{
+        .wrap{
+            .content2{
+                .home_equ_step{
+                    .equ_step01{
+                        .equ_step_line{
+                            width: 54px;
+                        }
+                    }
+                }
+            }
+        }
         
     }
 }
 
+@media screen and (max-width: 767px){
+    .home_equipment{
+        .wrap{
+            .content2{
+                .home_equ_step{
+                    .equ_step01{
+                        .equ_step_line{
+                            width: 50px;
+                            margin: 0 15px 0 15px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
 
+@media screen and (max-width: 576px){
+    .home_equipment{
+        .wrap{
+            .content2{
+                .desc_search_block{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .home_equ_search{
+                        margin-top: 20px;
+                    }
+                }
+                .home_equ_step{
+                    .equ_step01{
+                        margin-right: 40px;
+                        .equ_step_line{
+                            display: none;
+                        }
+                        .equ_step01_desc{
+                            p{
+                                width: 36px;
+                                margin: 20px auto 0;
+                            }
+                        }
+                    }
+                    .equ_step01:nth-child(4){
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+#equ_leftBtn{
+    margin-right: 15px;
+}
+
+.home_equ_pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_equ_pic_title{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.allequ{
+    font-size: 0;
+    position: relative;
+}
+
+.home_equ_block{
+    width: 1025px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.euq_min_list{
+    background-color: $white;
+    text-align: center ;
+    margin: 30px 15px 0 0;
+    width: 190px;
+    height: auto;
+    display: inline-block;
+    
+}
+
+.home_equ_img > img{
+    width: 100%;
+}
+
+.home_equ_text{
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.home_equ_text > a{
+    text-decoration: none;
+}
+
+.home_equ_btn{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.home_equ_background{
+    margin-top: 30px;
+}
 
 //營地搜尋
 .home_camping{
@@ -147,10 +379,8 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px){
-
-}
 @media screen and (max-width: 767px){
+    //搜尋營區
     .home_camping{
         .content3{
             .home_map{
