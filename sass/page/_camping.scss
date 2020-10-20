@@ -54,7 +54,7 @@
     display: inline-block;
     max-width: 900px;
     width: 100%;
-    margin-left:20px ;
+    margin: 0 0 0 20px;
 }
 //地圖的tooltip
 .leaflet-popup-content-wrapper{
@@ -446,19 +446,12 @@
             margin: 0 auto;
         }
     }
-    //營區介紹-營區資訊
+    //page2-營區介紹-營區資訊
     .location_inf{
         .content{
             display: block;
-            .location_map{
-                img{
-                }
-            }
             .location_text{
                 padding: 10px;
-                .text{
-                    // padding-bottom: 5px;
-                }
             }
         }
         .note{
