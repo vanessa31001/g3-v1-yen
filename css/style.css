@@ -1430,6 +1430,7 @@ header div.nav_logo a.logo_link.-up {
 
 .copyright {
   text-align: center;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -2222,6 +2223,10 @@ div.btn_submit2 {
   content: "";
 }
 
+.equ_container {
+  display: flex;
+}
+
 .equbar {
   margin-right: 30px;
   vertical-align: top;
@@ -2236,7 +2241,6 @@ div.btn_submit2 {
 
 .post_btn {
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .equlist_block {
@@ -2244,17 +2248,13 @@ div.btn_submit2 {
 }
 
 .equlist {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
 .equlist > h3 > a, .equlist > h3 > div, .equlist > div > a,
 .equlist > div > a, .inform_block02_text > h4 > a,
 .change_min_block01_text > h4 > a, .equ_text > a {
   text-decoration: none;
-}
-
-.equlist > img, .equlist > h3 {
-  display: inline-block;
 }
 
 .equmain {
@@ -2275,7 +2275,7 @@ div.btn_submit2 {
 }
 
 .bigimg > img {
-  width: 400px;
+  width: 100%;
 }
 
 .minimg > img {
@@ -2302,6 +2302,61 @@ button.reportbtn, .equ_collect_checkbox {
   float: right;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s;
+}
+
+.overlay.-on {
+  opacity: 1;
+  z-index: 1;
+}
+
+.overlay.-opacity-zero {
+  opacity: 0;
+}
+
+.overlay > article {
+  background-color: #fff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.report_form {
+  border: 1px solid #007E85;
+  margin-top: 10px;
+}
+
+.report_reason {
+  padding: 10px;
+}
+
+.report_close_btn {
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+article button.btn_modal_close {
+  cursor: pointer;
+}
+
+article button.btn_modal_close:focus {
+  outline: none;
+}
+
 .equ_collect_btn {
   margin: 5px;
 }
@@ -2314,10 +2369,6 @@ button.reportbtn, .equ_collect_checkbox {
   vertical-align: top;
   width: 49%;
   padding: 0px 0px 0px 20px;
-}
-
-.equbar, .equmain {
-  display: inline-block;
 }
 
 .equpic, .equdescribe {
@@ -2486,11 +2537,6 @@ button.reportbtn, .equ_collect_checkbox {
   margin-right: 5px;
 }
 
-.equ_partcontainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .equmain_all {
   width: calc(100% - 277px);
   display: flex;
@@ -2501,8 +2547,7 @@ button.reportbtn, .equ_collect_checkbox {
   background-color: #FFFFFF;
   text-align: center;
   width: 265px;
-  margin-right: 20px;
-  margin-bottom: 30px;
+  margin: 0 14px 30px 0;
 }
 
 .equ_img1 > img {
@@ -2548,19 +2593,13 @@ button.reportbtn, .equ_collect_checkbox {
 }
 
 .equpost_inform {
-  border-left: 1px solid #007E85;
   margin: 30px;
   padding: 0 0 0 30px;
   vertical-align: top;
 }
 
-.post_info_block {
-  margin-top: 20px;
-}
-
 .equ_info_name {
   width: 150px;
-  text-align: left;
   vertical-align: top;
 }
 
@@ -2572,16 +2611,16 @@ button.reportbtn, .equ_collect_checkbox {
   height: 30px;
 }
 
-.post_info_name_block, .sort_select_want_block {
-  display: inline-block;
-  vertical-align: top;
-}
-
 #sort_select_want01, #sort_select_want02
 , #sort_select_want03 {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+td {
+  vertical-align: top;
+  padding: 10px;
 }
 
 textarea {
@@ -2589,7 +2628,7 @@ textarea {
   border-radius: 8px;
 }
 
-textarea:focus, #equname01:focus,
+textarea:focus,
 #sort_select:focus, #sort_select_want01:focus,
 #sort_select_want02:focus, #sort_select_want03:focus {
   border: 3px solid #007E85;
@@ -2601,6 +2640,294 @@ textarea:focus, #equname01:focus,
 
 .pre_check_btn {
   margin-right: 15px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .mes_btn {
+    margin-top: 20px;
+    margin-left: 70px;
+  }
+  .other_equ_block {
+    margin-right: 35px;
+  }
+  .change_btn_block {
+    text-align: initial;
+  }
+  .equ_select {
+    margin-left: 85px;
+  }
+  .equpost_block {
+    display: flex;
+  }
+  .equpost_block .equpost_pic .post_bigimg {
+    width: 350px;
+  }
+  .equpost_block .equpost_pic .post_bigimg img {
+    width: 100%;
+  }
+  .equpost_block .equpost_inform form .check_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .equpost_block .equpost_inform form .check_btn .pre_check_btn {
+    margin: 0 0 15px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .equ_select {
+    display: flex;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+  .equ_container {
+    display: block;
+  }
+  .equ_container .equmain_all {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .equ_container .equbar {
+    display: block;
+    margin: 0;
+  }
+  .equ_container .equbar .nav {
+    width: 100%;
+    padding: 20px;
+  }
+  .equ_container .equbar .nav .title_btn_block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .equ_container .equbar .nav .equlist_block {
+    justify-content: space-around;
+    margin: 0;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist h3 {
+    width: 100%;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist .minsorts {
+    margin: 20px 30px 0 0;
+  }
+  .equ_container .equmain {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .equ_container .equmain .mes_btn {
+    margin-top: 20px;
+    margin-left: 70px;
+  }
+  .other_equ_block {
+    max-width: 197px;
+    width: 100%;
+  }
+  .change_block .change_min_block01 .change_min_block01_num {
+    width: 60px;
+  }
+  .change_block .change_min_block01 .change_min_block01_pic {
+    margin-right: 30px;
+  }
+  .change_block .change_min_block01 .change_min_block01_pic img {
+    width: 200px;
+  }
+  .change_block .change_min_block01 .change_min_block01_desc {
+    width: 300px;
+  }
+  .change_block .change_min_block01 .change_min_block01_mem .change_btn_block {
+    text-align: initial;
+  }
+  .equpost_block .equpost_pic {
+    width: 100%;
+    text-align: center;
+  }
+  .equpost_block .equpost_pic .post_bigimg {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .equ_select {
+    display: flex;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+  .equ_container {
+    display: block;
+  }
+  .equ_container .equmain_all {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .equ_container .equmain_all .equ_card1 {
+    width: 255px;
+  }
+  .equ_container .equmain_all .equ_card1 img {
+    width: 100%;
+  }
+  .equ_container .equbar {
+    display: block;
+    margin: 0;
+  }
+  .equ_container .equbar .nav {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+  .equ_container .equbar .nav .title_btn_block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .equ_container .equbar .nav .equlist_block {
+    justify-content: space-around;
+    margin: 0;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist h3 {
+    width: 100%;
+  }
+  .equ_container .equbar .nav .equlist_block .equlist .minsorts {
+    margin: 20px 30px 0 0;
+  }
+  .equ_container .equmain {
+    width: 100%;
+    margin-top: 20px;
+    display: inline-grid;
+  }
+  .equ_container .equmain .mes_btn {
+    margin-top: 20px;
+    margin-left: 70px;
+  }
+  .equ_container .equmain .equpic {
+    width: 100%;
+    border: none;
+  }
+  .equ_container .equmain .equdescribe {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .other_equ_block {
+    width: 100%;
+  }
+  .change_block .change_min_block01 .change_min_block01_num {
+    width: 40px;
+  }
+  .change_block .change_min_block01 .change_min_block01_pic {
+    margin: 0;
+    padding: 20px 0 20px 0;
+  }
+  .change_block .change_min_block01 .change_min_block01_pic img {
+    width: 200px;
+  }
+  .change_block .change_min_block01 .change_min_block01_desc {
+    width: 300px;
+    padding: 0 12px 0 0;
+    margin-right: 20px;
+  }
+  .change_block .change_min_block01 .change_min_block01_mem .change_btn_block {
+    text-align: initial;
+  }
+}
+
+.equpost_block .equpost_pic .post_bigimg {
+  width: 100%;
+}
+
+.equpost_block .equpost_pic .post_bigimg img {
+  width: 100%;
+}
+
+.equpost_block .equpost_inform {
+  margin: 10px;
+}
+
+.equpost_block .equpost_inform .check_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.equpost_block .equpost_inform .check_btn .pre_check_btn {
+  margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .equ_container .equmain_all .equ_card1 {
+    width: 250px;
+  }
+  .equ_container .equmain_all .equ_card1 img {
+    width: 100%;
+  }
+  .change_block .change_min_block01 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .change_block .change_min_block01 .change_min_block01_num {
+    width: 10%;
+  }
+  .change_block .change_min_block01 .change_min_block01_pic {
+    width: 40%;
+    margin-right: 20px;
+  }
+  .change_block .change_min_block01 .change_min_block01_desc {
+    width: 40%;
+    border: none;
+  }
+  .change_block .change_min_block01 .change_min_block01_mem {
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .change_block .change_min_block01 .change_min_block01_mem .change_btn {
+    margin: 0;
+  }
+  .equpost_block .equpost_pic .post_bigimg {
+    width: 100%;
+  }
+  .equpost_block .equpost_pic .post_bigimg img {
+    width: 100%;
+  }
+  .equpost_block .equpost_inform {
+    margin: 10px;
+    padding: 0;
+  }
+  .equpost_block .equpost_inform form table tr td textarea {
+    width: 200px;
+  }
+  .equpost_block .equpost_inform .check_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .equpost_block .equpost_inform .check_btn .pre_check_btn {
+    margin: 0 0 15px 0;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .equpost_block .equpost_pic .post_bigimg {
+    width: 100%;
+  }
+  .equpost_block .equpost_pic .post_bigimg img {
+    width: 100%;
+  }
+  .equpost_block .equpost_inform {
+    margin: 10px;
+    padding: 0;
+  }
+  .equpost_block .equpost_inform form table tr td textarea {
+    width: 200px;
+  }
 }
 
 * {
