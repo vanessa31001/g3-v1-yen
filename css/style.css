@@ -4090,61 +4090,40 @@ input[type="submit"], button {
   width: 100%;
   height: 100%;
   background-color: #AFDCDE;
-  border: 1px solid red;
-  z-index: 1;
 }
 
 .homepage_bgcolor .homepage_bgpic .home {
   height: 750px;
-  margin: 0 auto;
-  border: 1px solid blue;
-  background-image: url(../../pic/index/1020_bg_pic.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  width: 100%;
-  z-index: 5;
 }
 
-.homepage_bgcolor .homepage_bgpic .home .tent {
+.homepage_bgcolor .homepage_bgpic .home .container {
+  background: url("../../pic/index/1020_bg_pic.svg") no-repeat;
+  background-position: center;
+  width: 100%;
+  overflow: hidden;
   height: 750px;
+  overflow: hidden;
   margin: 0 auto;
-  border: 1px solid blue;
-  background-image: url(../../pic/index/1020_bg_tent.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.homepage_bgcolor .homepage_bgpic .home .container .scene .tent_1 {
+  background: url("../../pic/index/1020_bg_tent.svg");
   background-position: center;
-  position: relative;
   width: 100%;
-  z-index: 6;
+  overflow: hidden;
+  height: 750px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.homepage_bgcolor .homepage_bgpic .home .wrap .home_first {
-  max-width: 250px;
-  width: 100%;
-}
-
-.homepage_bgcolor .homepage_bgpic .home .wrap .home_first img {
+.homepage_bgcolor .homepage_bgpic .home .bg_logo {
+  width: 250px;
   position: absolute;
   top: 30vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .homepage_bgcolor .homepage_bgpic .home .wrap .home_first img {
-    max-width: 200px;
-    top: 32vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .homepage_bgcolor .homepage_bgpic .home .wrap .home_first img {
-    max-width: 130px;
-    top: 35vh;
-  }
+  z-index: 7;
 }
 
 .home_group {
@@ -4217,7 +4196,8 @@ input[type="submit"], button {
   margin: 0 30px 0 30px;
 }
 
-.equ_step01_num, .equ_step_line {
+.equ_step01_num,
+.equ_step_line {
   display: inline-block;
   vertical-align: middle;
 }

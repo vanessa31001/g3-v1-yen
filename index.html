@@ -59,16 +59,16 @@
         <div class="homepage_bgpic">
             <!-- 首頁形象圖 -->
             <section class="home">
-                <div class="tent">
-                    <!-- <img src="./pic/index/1020_bg_tent.svg" alt=""> -->
+                <img src="./pic/index/1020_bg_logo.svg" class="bg_logo">
+                <div id="container" class="container">
+                    <div id="scene" class="scene">
+                        <div data-depth="0.20">
+                            <div class="tent_1"></div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="wrap">
-                    
-
-                    <div class="home_first">
-                        <img src="./pic/index/1020_bg_logo.svg">
-                    </div>
-                    <img src="./image/aboutpage/story1.jpg" class="thumbnail">
                 </div>
             </section>
             <!-- 揪團 -->
@@ -529,6 +529,12 @@
             `,
         });
     </script>
+        <script>
+
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+        
+            </script>
     <script src="./js/main.js"></script>
 </body>
 </html>
