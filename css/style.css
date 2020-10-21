@@ -1853,7 +1853,7 @@ body {
   margin: 0;
 }
 
-.container {
+.container_2 {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1867,7 +1867,7 @@ body {
           justify-content: center;
 }
 
-.container svg {
+.container_2 svg {
   display: block;
   height: 99vh;
 }
