@@ -8,8 +8,8 @@
     <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./pic/commom/1017_logo.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 </head>
 <body>
     <header >
@@ -419,7 +419,35 @@
                 </div>
             </section>
             <!-- 明信片 -->
-            <section class="postcard_Front">
+            <section class="home_postcard">
+                <div class="wrap">
+                    <div class="content3">
+                        <div class="postcard_Front">
+                            <div class="postcard_title">
+                                <div class="title">來去寫信
+                                    <div class="green3 level1 bold">
+                                        分享美美的露營照給朋友~呼朋引伴一起揪團露營
+                                    </div>     
+                                </div>
+                            </div>
+                            <div class="postcard_frontPage">
+                                <div class="postcard_frontLogo">
+                                    <img class="frontPostcardLogo" src="./pic/postcardMaterial/LOGO/logoUse.svg">
+                                </div>
+                                <div class="FrontPutPhoto">
+                                    
+                                </div>
+                        
+                            </div>
+                            <div class="postcardLink">
+                                <a href="./letter.html"><button class="mainbtn1 postcardButton">我要寫信</button></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="postcard_Front">
                 <div class="postcard_title">
                     <div class="title">來去寫信
                         <div class="green3 level1 bold">
@@ -440,7 +468,7 @@
                     <a href="./letter.html"><button class="mainbtn1 postcardButton">我要寫信</button></a>
                 </div>
                 
-            </section>
+            </section> -->
             <!-- 小遊戲 -->
             <section class="home_game ">
                 <div class="wrap ">
@@ -631,12 +659,10 @@
             `,
         });
     </script>
-        <script>
-
-            var scene = document.getElementById('scene');
-            var parallax = new Parallax(scene);
-        
-            </script>
+    <!-- <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script> -->
     <script src="./js/main.js"></script>
 </body>
 </html>
