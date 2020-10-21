@@ -510,7 +510,7 @@ textarea:focus ,
             .post_bigimg{
                 width: 350px;
                 img{
-                    width: 100%;
+                    // width: 100%;
                     
                 }
             }
@@ -620,8 +620,8 @@ textarea:focus ,
             width: 100%;
             text-align: center;
             .post_bigimg{
-                width: 100%;
-                // max-width: 650px;
+                // width: 100%;
+                max-width: 650px;
                 // border: 1px solid red;
                 margin: 0 0 00;
             }
@@ -678,7 +678,7 @@ textarea:focus ,
                     justify-content: space-between;
                 }
                 
-        .equlist_block{
+                .equlist_block{
                     // display: flex;
                     justify-content: space-around;
                     // width: 80%;
@@ -696,15 +696,15 @@ textarea:focus ,
                         
                         
                     }
-            .equpost_pic{
-            .post_bigimg{
-                width: 100%;
-                img{
-                    // max-width: 680px;
-                    width: 100%;
-                }
-            }
-        }   
+                    .equpost_pic{
+                        .post_bigimg{
+                        // width: 100%;
+                            img{
+                                    // max-width: 680px;
+                                    // width: 100%;
+                            }
+                        }
+                    }   
                 }
             }
 
@@ -765,15 +765,15 @@ textarea:focus ,
         .equpost_pic{
             .post_bigimg{
                 width: 100%;
-                // img{
-                
-                //     width: 100%;
-                // }
+                img{
+                    // max-width: 680px;
+                    // width: 100%;
+                }
             }
         }    
 
         .equpost_inform{
-            margin: 10px;
+            // margin: 10px;
                 .check_btn{
                     display: flex;
                     flex-direction: column;
@@ -832,12 +832,11 @@ textarea:focus ,
 
     //post頁面
     .equpost_block{
-        text-align: center;
         .equpost_pic{
             .post_bigimg{
-                width: 100%;
+                // width: 100%;
                 img{
-                    width: 100%;
+                    // width: 100%;
                 }
             }
         }
@@ -877,9 +876,9 @@ textarea:focus ,
     .equpost_block{
         .equpost_pic{
             .post_bigimg{
-                width: 100%;
+                // width: 100%;
                 img{
-                    width: 100%;
+                    // width: 100%;
                 }
             }
         }

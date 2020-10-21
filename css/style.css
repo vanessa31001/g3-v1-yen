@@ -3704,9 +3704,6 @@ textarea:focus,
   .equpost_block .equpost_pic .post_bigimg {
     width: 350px;
   }
-  .equpost_block .equpost_pic .post_bigimg img {
-    width: 100%;
-  }
   .equpost_block .equpost_inform form .check_btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3808,7 +3805,7 @@ textarea:focus,
     text-align: center;
   }
   .equpost_block .equpost_pic .post_bigimg {
-    width: 100%;
+    max-width: 650px;
     margin: 0 0 00;
   }
 }
@@ -3886,12 +3883,6 @@ textarea:focus,
   .equ_container .equbar .nav .equlist_block .equlist .minsorts {
     margin: 20px 30px 0 0;
   }
-  .equ_container .equbar .nav .equlist_block .equpost_pic .post_bigimg {
-    width: 100%;
-  }
-  .equ_container .equbar .nav .equlist_block .equpost_pic .post_bigimg img {
-    width: 100%;
-  }
   .equ_container .equmain {
     width: 100%;
     margin-top: 20px;
@@ -3937,10 +3928,6 @@ textarea:focus,
 
 .equpost_block .equpost_pic .post_bigimg {
   width: 100%;
-}
-
-.equpost_block .equpost_inform {
-  margin: 10px;
 }
 
 .equpost_block .equpost_inform .check_btn {
@@ -4003,15 +3990,6 @@ textarea:focus,
   .change_block .change_min_block01 .change_min_block01_mem .change_btn {
     margin: 0;
   }
-  .equpost_block {
-    text-align: center;
-  }
-  .equpost_block .equpost_pic .post_bigimg {
-    width: 100%;
-  }
-  .equpost_block .equpost_pic .post_bigimg img {
-    width: 100%;
-  }
   .equpost_block .equpost_inform {
     margin: 10px;
     padding: 0;
@@ -4037,12 +4015,6 @@ textarea:focus,
 }
 
 @media screen and (max-width: 376px) {
-  .equpost_block .equpost_pic .post_bigimg {
-    width: 100%;
-  }
-  .equpost_block .equpost_pic .post_bigimg img {
-    width: 100%;
-  }
   .equpost_block .equpost_inform {
     margin: 10px;
     padding: 0;
