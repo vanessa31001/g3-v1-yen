@@ -6887,7 +6887,7 @@ input[type="submit"], button {
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url(../../pic/backstage/login_bg.png);
+  background-image: url(../pic/backstage/login_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
