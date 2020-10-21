@@ -4005,9 +4005,6 @@ textarea:focus,
   .equpost_block {
     text-align: center;
   }
-  .equpost_block .equpost_pic {
-    width: 400px;
-  }
   .equpost_block .equpost_pic .post_bigimg {
     width: 100%;
   }
@@ -5222,13 +5219,14 @@ input[type="submit"], button {
 }
 
 .wrap .postcard_content .postcard {
+  display: block;
   margin-right: 15px;
   width: 840px;
   height: 560px;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../pic/postcardMaterial/paper/paper1.png");
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
 }
 
 .wrap .postcard_content .postcard .pdContentImg {
@@ -5239,7 +5237,7 @@ input[type="submit"], button {
   border-radius: 50%;
   padding: 15px 25px 15px 25px;
   display: block;
-  background-image: url("../pic/postcardMaterial/paper/paper1.png");
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
 }
 
 .wrap .postcard_content .postcard .putPhoto {
@@ -5252,10 +5250,43 @@ input[type="submit"], button {
   background-size: cover;
 }
 
+.wrap .postcard_content .leftPostcard1 {
+  display: none;
+  margin-right: 15px;
+  width: 840px;
+  height: 560px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+}
+
+.wrap .postcard_content .postcard2 {
+  display: none;
+  margin-right: 15px;
+  width: 840px;
+  height: 560px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+}
+
+.wrap .postcard_content .leftPostcard2 {
+  display: block;
+  margin-right: 15px;
+  width: 840px;
+  height: 560px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+}
+
 .wrap .postcard_content .rightPostcard {
   width: 287px;
   height: 560px;
-  background-image: url("../pic/postcardMaterial/leftBackground.svg");
+  background-image: url("../../pic/postcardMaterial/leftBackground.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -5311,18 +5342,18 @@ input[type="submit"], button {
 }
 
 .wrap .postcard_content .rightPostcard .stylePostcard .paperTexture .posBackground #paper1 {
-  background-image: url("../pic/postcardMaterial/paper/paper1.png");
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
   background-size: cover;
   border: 5px solid rgba(255, 0, 0, 0.4);
 }
 
 .wrap .postcard_content .rightPostcard .stylePostcard .paperTexture .posBackground #paper2 {
-  background-image: url("../pic/postcardMaterial/paper/paper2.png");
+  background-image: url("../../pic/postcardMaterial/paper/paper2.png");
   background-size: cover;
 }
 
 .wrap .postcard_content .rightPostcard .stylePostcard .paperTexture .posBackground #paper3 {
-  background-image: url("../pic/postcardMaterial/paper/paper3.png");
+  background-image: url("../../pic/postcardMaterial/paper/paper3.png");
   background-size: cover;
 }
 
