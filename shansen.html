@@ -660,10 +660,69 @@
             `,
         });
     </script>
-    <!-- <script>
-        var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene);
-    </script> -->
+    <!-- 交換設備 -->
+    <script>
+        //設備交換 最新刊設備
+        $(document).ready(function(){
+                let imgCount = $('.allequ .euq_min_list').length;
+                let divWidth = $('.home_equ_block').width();
+
+                $('.allequ').width(Math.ceil(imgCount / 5) * divWidth);
+                let allwidth = (Math.ceil(imgCount / 5));
+                let count=1;
+                $('#equ_leftBtn').click(function(){
+                if(count == 0){
+                    $('#equ_leftBtn').css('background-color', '#FFCD43');
+                    $('#equ_leftBtn').css('border-color', '#FFCD43');
+                    $('#equ_leftBtn').css('border-style', 'inset');
+                }
+                else{
+                    count--; 
+                    $('.allequ').animate({
+                        right: divWidth * count,
+                    });
+                    console.log(count);
+                    if(count == 0){
+                        $('#equ_leftBtn').css('background-color', '#C4C4C4');
+                        $('#equ_leftBtn').css('border-color', '#C4C4C4');
+                        $('#equ_leftBtn').css('border-style', 'solid');
+                        $('#equ_rightBtn').css('background-color', '#FFCD43');
+                        $('#equ_rightBtn').css('border-color', '#FFCD43');
+                        $('#equ_rightBtn').css('border-style', 'inset');
+                    }
+
+                }
+                
+            });
+            $('#equ_rightBtn').click(function(){
+                if(count < allwidth-1){       
+                    count++;
+                    $('.allequ').animate({
+                        right: divWidth * count,
+                    });
+                    console.log(count);
+                    if(count == allwidth-1){
+                        $('#equ_rightBtn').css('background-color', '#C4C4C4');
+                        $('#equ_rightBtn').css('border-color', '#C4C4C4');
+                        $('#equ_rightBtn').css('border-style', 'solid');
+                    }
+                    else{
+                        $('#equ_rightBtn').css('background-color', '#FFCD43');
+                        $('#equ_rightBtn').css('border-color', '#FFCD43');
+                        $('#equ_rightBtn').css('border-style', 'inset');
+                    }
+                    if(count != 0){
+                        $('#equ_leftBtn').css('background-color', '#FFCD43');
+                        $('#equ_leftBtn').css('border-color', '#FFCD43');
+                        $('#equ_leftBtn').css('border-style', 'inset');
+                    }
+                    console.log(count);
+                }
+                
+            });
+        });    
+    </script>
+    
     <script src="./js/main.js"></script>
 </body>
 </html>
