@@ -6053,6 +6053,7 @@ input[type="submit"], button {
 
 .home_game .wrap .content5 {
   margin: 20px auto 0;
+  padding-bottom: 10px;
 }
 
 .home_game .wrap .content5 .game_table {
@@ -6064,21 +6065,17 @@ input[type="submit"], button {
   width: 100%;
 }
 
-.home_game .wrap .content5 .game_table form {
-  border: 1px solid red;
-}
-
 .home_game .wrap .content5 .game_table form .game_title_question01 {
   margin: 0 auto;
   text-align: center;
-  padding-top: 57px;
+  padding-top: 30px;
 }
 
 .home_game .wrap .content5 .game_table form .game_button {
   text-align: center;
   margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
