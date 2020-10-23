@@ -281,7 +281,7 @@
             data: {
             cityIndex: 0,
             areaIndex: 0,
-            weather:[],
+            weather:'',
             },
             watch: {
             areaIndex() {
@@ -300,7 +300,7 @@
             mounted() {
                 axios.get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-071?Authorization=CWB-FA772AA0-8D0C-4FEF-B569-7DE1EEF2453D&format=JSON&locationName=%E6%96%B0%E5%BA%97%E5%8D%80&elementName=MinT,MaxT,Wind,Td,PoP12h,T,RH,Wx,WeatherDescription').then(data => {
                 // console.log(data)
-                this.weather_data = data.data.cwbopendata.dataset.locations.location
+                this.weather_data = data.data.cwbopendata.dataset.locations.location;
                 
             })
             },
@@ -334,7 +334,7 @@
                         </div>
                         <div class="PoP infosbox">
                             降雨機率
-                            <p id="PoP"></p>
+                            <p id="PoP">{{}}</p>
                         </div>
                         <div class="RH infosbox">
                             相對溼度
@@ -394,7 +394,9 @@
             `,
         });
     </script>
-    <script>
+
+
+    <!-- <script>
         let N1data;
         $(function (N1) {
             $.ajax({
@@ -467,7 +469,7 @@ function RenderWeather(AreaData){
     $id('PoP').innerText = AreaData.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value + '%'
     $id('RH').innerText = AreaData.records.locations[0].location[0].weatherElement[2].time[0].elementValue[0].value + '%'
 }
-    </script>
+    </script> -->
 
 
 </body>

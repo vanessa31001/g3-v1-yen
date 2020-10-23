@@ -121,8 +121,42 @@
         }
         .content1{
             margin: 20px auto 0;
-            border: 1px solid red;
             height: 400px;
+            text-align: center;
+            .gMainGroups{
+                width:100%;
+                // border: 1px solid red;
+                height: 250px;
+                margin: 20px 0 40px 0;
+                font-size: 0;
+                a{
+                    background-color: $white;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    height: 100%;
+                    width: 100%;
+                    margin-right: 40px;
+                    display: inline-block; 
+                    width: calc( (100% - 120px) / 4);
+                    &:last-child{
+                        margin-right: 0px;
+                    }    
+                    .gMainGroup{
+                        
+                        .img{
+                            width: 100%;
+                            height: 180px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
         }
     }
 }
@@ -137,9 +171,6 @@
                         margin: 10px 50px 10px 40px;
                     }
                 }
-            }
-            .content1{
-                border: 1px solid red;
             }
         }
     }
@@ -156,7 +187,18 @@
                 }
             }
             .content1{
-                border: 1px solid red;
+                .gMainGroups{
+                    a{
+                        width: calc( (100% - 80px) / 3);
+                        &:nth-child(3){
+                            margin-right: 0px;
+                        }
+                        &:last-child{
+                            display: none;
+                            margin-right: 0px;
+                        }    
+                    }
+                }
             }
         }
     }
@@ -178,7 +220,19 @@
                 }
             }
             .content1{
-                border: 1px solid red;
+                .gMainGroups{
+                    margin: 10px 0;
+                    a{
+                        width: calc( (100% - 40px) / 2);
+                        &:nth-child(2){
+                            margin-right: 0px;
+                        }
+                        &:last-child, &:nth-child(3){
+                            display: none;
+                            margin-right: 0px;
+                        }    
+                    }
+                }
             }
         }
     }
@@ -198,9 +252,6 @@
                         width: calc(100% - 10px);
                     }
                 }
-            }
-            .content1{
-                border: 1px solid red;
             }
         }
     }
@@ -449,7 +500,6 @@
                 }
             }
             .content3 {
-                padding: 0 10px;
                 margin: 20px auto 0;
                 .home_map {
                     display: block;
