@@ -5353,14 +5353,10 @@ input[type="submit"], button {
   width: 100%;
 }
 
-.home_game .wrap .content5 .game_table form {
-  border: 1px solid red;
-}
-
 .home_game .wrap .content5 .game_table form .game_title_question01 {
   margin: 0 auto;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .home_game .wrap .content5 .game_table form .game_button {

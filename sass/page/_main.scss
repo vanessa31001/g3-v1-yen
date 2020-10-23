@@ -328,6 +328,7 @@
         }
     }
 }
+
 //營地搜尋
 .home_camping{
     width: 100%;
@@ -648,14 +649,14 @@
                 margin: 0px auto 0;
                 .game_title {
                     padding-left: 10%;
-                width: 100%;
+                    width: 100%;
                 }
                 form {
-                    border: 1px solid red;
+                    // border: 1px solid red;
                     .game_title_question01 {
                     margin: 0 auto;
                     text-align: center;
-                    padding-top: 40px;
+                    padding-top: 30px;
                     }
                     .game_button {
                     text-align: center;
