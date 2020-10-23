@@ -69,3 +69,13 @@
     background-color: 
     #F3F8F4;
 }
+
+.textareastyle{
+    border-radius: 3px;
+    border: 1px solid $grayColor1;
+}
+.textareastyle:focus{
+    border: 2px solid $greenColor1;
+    background-color: 
+    #F3F8F4;
+}

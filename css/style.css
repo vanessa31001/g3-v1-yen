@@ -155,6 +155,16 @@ table {
   background-color: #F3F8F4;
 }
 
+.textareastyle {
+  border-radius: 3px;
+  border: 1px solid #626262;
+}
+
+.textareastyle:focus {
+  border: 2px solid #007E85;
+  background-color: #F3F8F4;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -7335,7 +7345,7 @@ input[type="submit"], button {
 
 .tagbtn_yellow {
   background-color: #FFCD43;
-  color: #FFFFFF;
+  color: #000000;
   padding: 0 15px;
   height: 30px;
   font-size: 14px;
