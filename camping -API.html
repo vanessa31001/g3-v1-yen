@@ -297,10 +297,13 @@
             },
 
             },
-            mounted(){
-                axios.get("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-071?Authorization=CWB-FA772AA0-8D0C-4FEF-B569-7DE1EEF2453D&format=JSON&locationName=%E6%96%B0%E5%BA%97%E5%8D%80&elementName=MinT,MaxT,Wind,Td,PoP12h,T,RH,Wx,WeatherDescription",{
-                    }).then(response => this.items = location[0].weatherElement[2].time[0].elementValue[0].MinT.value);
-                },
+            mounted() {
+                axios.get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-071?Authorization=CWB-FA772AA0-8D0C-4FEF-B569-7DE1EEF2453D&format=JSON&locationName=%E6%96%B0%E5%BA%97%E5%8D%80&elementName=MinT,MaxT,Wind,Td,PoP12h,T,RH,Wx,WeatherDescription').then(data => {
+                // console.log(data)
+                this.weather_data = data.data.cwbopendata.dataset.locations.location
+                
+            })
+            },
             template: 
             `
             <div>
