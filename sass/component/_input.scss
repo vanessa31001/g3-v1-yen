@@ -41,6 +41,31 @@
     cursor: pointer;
 }
 .search_input input:focus{
+    background-color: #F3F8F4;
+}
+
+
+// ----------------------------------------
+
+.inputstyle{
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid $grayColor1;
+}
+.inputstyle:focus{
+    border: 2px solid $greenColor1;
+    background-color: 
+    #F3F8F4;
+}
+
+// ----------------------------------------------
+.selectstyle{
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid $grayColor1;
+}
+.selectstyle:focus{
+    border: 2px solid $greenColor1;
     background-color: 
     #F3F8F4;
 }

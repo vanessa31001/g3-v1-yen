@@ -15,12 +15,12 @@
     &:hover{
         background-color:$white;
         color: $greenColor3;
-      }
+    }
     &:active{
         top: $btn_move;
         left: $btn_move;
         box-shadow: none;
-      }
+    }
 }
 @mixin mainbtn2(){
     background-color: $white;
@@ -39,12 +39,12 @@
     &:hover{
         background-color:$greenColor3;
         color: $white;
-      }
+    }
     &:active{
         top: $btn_move;
         left: $btn_move;
         box-shadow: none;
-      }
+    }
 }
 @mixin secondbtn1(){
     background-color: $greenColor3; 
@@ -63,12 +63,12 @@
     &:hover{
         background-color:$white;
         color: $greenColor3;
-      }
-      &:active{
+    }
+    &:active{
         top: $btn_move;
         left: $btn_move;
         box-shadow: none;
-      }
+    }
 }
 @mixin secondbtn2(){
     background-color: $white; 
@@ -87,12 +87,12 @@
     &:hover{
         background-color:$greenColor3;
         color: $white;
-      }
-      &:active{
+    }
+    &:active{
         top: $btn_move;
         left: $btn_move;
         box-shadow: none;
-      }
+    }
 }
 @mixin thirdbtn1_green(){
     background-color: $greenColor3; 
@@ -110,7 +110,7 @@
     &:hover{
         background-color:$white;
         color: $greenColor3;
-      }
+    }
 }
 @mixin thirdbtn2_green(){
     background-color: $white; 
@@ -128,7 +128,7 @@
     &:hover{
         background-color:$greenColor3;
         color: $white;
-      }
+    }
 }
 
 @mixin thirdbtn1_orange(){
@@ -146,7 +146,7 @@
     &:hover{
         background-color:$white;
         color: $orangeColor1;
-      }
+    }
 }
 @mixin thirdbtn2_orange(){
     background-color: $white; 
@@ -163,7 +163,7 @@
     &:hover{
         background-color:$orangeColor1;
         color: $white;
-      }
+    }
 }
 
 @mixin tagbtn_green(){
