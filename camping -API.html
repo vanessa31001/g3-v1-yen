@@ -8,8 +8,9 @@
     <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./pic/commom/1017_logo.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header >
@@ -247,25 +248,25 @@
         Vue.component('Select', {
             props: ['value', 'options', 'label'],
             computed: {
-            index: {
-                get() {
-                return this.value;
-                },
-                set(val) {
-                this.$emit("input", val);
+                index: {
+                    get() {
+                    return this.value;
+                    },
+                    set(val) {
+                    this.$emit("input", val);
+                    }
                 }
-            }
             },
             methods: {
-            optionText(item) {    	
-                if( this.label === 'text' ) {
-                return item["text"];
+                optionText(item) {    	
+                    if( this.label === 'text' ) {
+                    return item["text"];
+                    }
+                    else {
+                    return eval("item." + this.label);
+                    }
+                    
                 }
-                else {
-                return eval("item." + this.label);
-                }
-                
-            }
             },
             template: 
             `  	
@@ -280,6 +281,7 @@
             data: {
             cityIndex: 0,
             areaIndex: 0,
+            weather:[],
             },
             watch: {
             areaIndex() {
@@ -295,6 +297,10 @@
             },
 
             },
+            mounted(){
+                axios.get("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-071?Authorization=CWB-FA772AA0-8D0C-4FEF-B569-7DE1EEF2453D&format=JSON&locationName=%E6%96%B0%E5%BA%97%E5%8D%80&elementName=MinT,MaxT,Wind,Td,PoP12h,T,RH,Wx,WeatherDescription",{
+                    }).then(response => this.items = location[0].weatherElement[2].time[0].elementValue[0].MinT.value);
+                },
             template: 
             `
             <div>
