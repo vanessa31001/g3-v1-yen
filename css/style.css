@@ -6149,17 +6149,114 @@ input[type="submit"], button {
 
 .home_postcard .wrap .content4 {
   margin: 20px auto 0;
-  border: 1px solid green;
+  width: 100%;
   height: 400px;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.home_postcard .wrap .content4 .postcardHomeLeft {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.home_postcard .wrap .content4 .postcardHomeLeft .posHomePutPhoto {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  background-image: url("../../pic/postcardMaterial/presetPhoto/postcardPhoto3.jpg");
+  border-radius: 10px;
+}
+
+.home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
+  padding: 10px 15px 10px 15px;
+  width: 13%;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+  bottom: 5%;
+  background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight {
+  width: 49%;
+  height: 100%;
+  border-left: 3px solid #70CACE;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords {
+  height: 75%;
+  position: relative;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords h1 {
+  position: absolute;
+  left: 8%;
+  top: 9%;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  position: absolute;
+  line-height: 60px;
+  left: 8%;
+  top: 20%;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords .HomePosLittle {
+  width: 18%;
+  position: absolute;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle1 {
+  bottom: -18%;
+  left: 3%;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle2 {
+  bottom: -19%;
+  left: 25%;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle3 {
+  bottom: -16%;
+  left: 46%;
+}
+
+.home_postcard .wrap .content4 .postcardHomeRight .posFromTo {
+  width: 30%;
+  float: right;
+}
+
+.home_postcard .wrap .linkPostcard {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home_postcard .wrap .linkPostcard a {
+  text-align: center;
+}
+
+.home_postcard .wrap .linkPostcard a .posHomeBtn {
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .home_postcard .wrap .homepage_title .homepage_sub_title .sub_text {
     width: 450px;
     margin: 10px 50px 10px 40px;
-  }
-  .home_postcard .wrap .content4 {
-    border: 1px solid green;
   }
 }
 
@@ -6169,8 +6266,12 @@ input[type="submit"], button {
     margin: 10px auto;
     margin-left: 10px;
   }
-  .home_postcard .wrap .content4 {
-    border: 1px solid green;
+  .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
+    width: 20%;
+    left: 43%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords p {
+    line-height: 45px;
   }
 }
 
@@ -6187,7 +6288,35 @@ input[type="submit"], button {
     margin: 10px auto;
   }
   .home_postcard .wrap .content4 {
-    border: 1px solid green;
+    height: 350px;
+  }
+  .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
+    width: 25%;
+    left: 39%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords h1 {
+    top: 5%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords p {
+    line-height: 38px;
+    font-size: 16px;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle1 {
+    bottom: -10%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle2 {
+    bottom: -12%;
+    left: 30%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle3 {
+    left: 18%;
+    bottom: -27%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posFromTo {
+    width: 40%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posFromTo p {
+    font-size: 16px;
   }
 }
 
@@ -6199,7 +6328,58 @@ input[type="submit"], button {
     padding: 0 5px;
   }
   .home_postcard .wrap .content4 {
-    border: 1px solid green;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 500px;
+  }
+  .home_postcard .wrap .content4 .postcardHomeLeft {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    height: 60%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
+    width: 68px;
+    left: 43%;
+    bottom: 2%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight {
+    height: 180px;
+    width: 100%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords {
+    height: 65%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords h1 {
+    top: -32%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords p {
+    line-height: 25px;
+    font-size: 16px;
+    top: -5%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords .HomePosLittle {
+    width: 20%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle1 {
+    bottom: -40%;
+    left: 3%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle2 {
+    bottom: -40%;
+    left: 50%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords #Poslittle3 {
+    bottom: -40%;
+    left: 27%;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posFromTo {
+    width: 82px;
+    right: 6%;
+    position: absolute;
+  }
+  .home_postcard .wrap .content4 .postcardHomeRight .posFromTo p {
+    font-size: 16px;
   }
 }
 

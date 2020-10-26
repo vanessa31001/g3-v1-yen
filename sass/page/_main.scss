@@ -713,9 +713,91 @@
         }
         .content4{
             margin: 20px auto 0;
-            border: 1px solid green;
+            width: 100%;
             height: 400px;
+            background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            .postcardHomeLeft{
+                width: 50%;
+                height: 100%;
+                position: relative;
+                .posHomePutPhoto{
+                    width: 90%;
+                    height: 80%;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    background-image: url('../../pic/postcardMaterial/presetPhoto/postcardPhoto3.jpg');
+                    border-radius: 10px;
+                }
+                .posHomeLogo{
+                    padding: 10px 15px 10px 15px;
+                    width: 13%;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 45%;
+                    bottom: 5%;
+                    background-image: url("../../pic/postcardMaterial/paper/paper1.png");
+                }
+            }
+            .postcardHomeRight{
+                width: 49%;
+                height: 100%;
+                border-left: 3px solid $greenColor2;
+                .posHomeWords{
+                    height: 75%;
+                    position: relative;
+                    h1{
+                        position: absolute;
+                        left: 8%;
+                        top: 9%;
+                    }
+                    p{
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-bottom: 5%;
+                        position: absolute;
+                        line-height: 60px;
+                        left: 8%;
+                        top: 20%;
+                    }
+                    .HomePosLittle{
+                        width: 18%;
+                        position: absolute;
+                    }
+                    #Poslittle1{
+                        bottom: -18%;
+                        left: 3%;
+                    }
+                    #Poslittle2{
+                        bottom: -19%;
+                        left: 25%;
+                    }
+                    #Poslittle3{
+                        bottom: -16%;
+                        left: 46%;
+                    }
+                }
+                .posFromTo{
+                    width: 30%;
+                    float: right;
+                }
+            }
         }
+        .linkPostcard{
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            a{
+                text-align: center;
+                .posHomeBtn{
+                    margin: 0 auto;
+                }
+            }
+        }
+
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
@@ -728,9 +810,6 @@
                         margin: 10px 50px 10px 40px;
                     }
                 }
-            }
-            .content4{
-                border: 1px solid green;
             }
         }
     }
@@ -748,7 +827,20 @@
                 }
             }
             .content4{
-                border: 1px solid green;
+                .postcardHomeLeft{
+                    .posHomeLogo{
+                        width: 20%;
+                        left: 43%;
+                    }
+                }
+                .postcardHomeRight{
+                    .posHomeWords{
+                        p{
+                            line-height: 45px;
+                        }
+                        
+                    }
+                }
             }
         }
     }
@@ -770,7 +862,42 @@
                 }
             }
             .content4{
-                border: 1px solid green;
+                height: 350px;
+                .postcardHomeLeft{
+                    .posHomeLogo{
+                        width: 25%;
+                        left: 39%;
+                    }
+                }
+                .postcardHomeRight{
+                    .posHomeWords{
+
+                        h1{
+                            top: 5%;
+                        }
+                        p{
+                            line-height: 38px;
+                            font-size: 16px;
+                        }
+                        #Poslittle1{
+                            bottom: -10%;
+                        }
+                        #Poslittle2{
+                            bottom: -12%;
+                            left: 30%;
+                        }
+                        #Poslittle3{
+                            left: 18%;
+                            bottom: -27%;   
+                        }
+                    }
+                    .posFromTo{
+                        width: 40%;
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -789,7 +916,55 @@
                 }
             }
             .content4{
-                border: 1px solid green;
+                flex-wrap: wrap;
+                height: 500px;
+                .postcardHomeLeft{
+                    flex: 100%;
+                    height: 60%;
+                    .posHomeLogo{
+                        width: 68px;
+                        left: 43%;
+                        bottom: 2%;
+                    }
+                }
+                .postcardHomeRight{
+                    height: 180px;
+                    width: 100%;
+                    .posHomeWords{
+                        height: 65%;
+                        h1{
+                            top: -32%;
+                        }
+                        p{
+                            line-height: 25px;
+                            font-size: 16px;
+                            top: -5%;
+                        }
+                        .HomePosLittle{
+                            width: 20%;
+                        }
+                        #Poslittle1{
+                            bottom: -40%;
+                            left: 3%;
+                        }
+                        #Poslittle2{
+                            bottom: -40%;
+                            left: 50%;
+                        }
+                        #Poslittle3{
+                            bottom: -40%;
+                            left: 27%;
+                        }
+                    }
+                    .posFromTo{
+                        width: 82px;
+                        right: 6%;
+                        position: absolute;
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
         }
     }
