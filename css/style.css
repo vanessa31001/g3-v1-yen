@@ -6182,8 +6182,10 @@ input[type="submit"], button {
   width: 13%;
   border-radius: 50%;
   position: absolute;
-  left: 45%;
+  left: 50%;
   bottom: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-image: url("../../pic/postcardMaterial/paper/paper1.png");
 }
 
@@ -6268,7 +6270,6 @@ input[type="submit"], button {
   }
   .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
     width: 20%;
-    left: 43%;
   }
   .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords p {
     line-height: 45px;
@@ -6292,7 +6293,6 @@ input[type="submit"], button {
   }
   .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
     width: 25%;
-    left: 39%;
   }
   .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords h1 {
     top: 5%;
@@ -6340,12 +6340,12 @@ input[type="submit"], button {
   }
   .home_postcard .wrap .content4 .postcardHomeLeft .posHomeLogo {
     width: 68px;
-    left: 43%;
     bottom: 2%;
   }
   .home_postcard .wrap .content4 .postcardHomeRight {
     height: 180px;
     width: 100%;
+    border-left: none;
   }
   .home_postcard .wrap .content4 .postcardHomeRight .posHomeWords {
     height: 65%;

@@ -737,8 +737,9 @@
                     width: 13%;
                     border-radius: 50%;
                     position: absolute;
-                    left: 45%;
+                    left: 50%;
                     bottom: 5%;
+                    transform: translateX(-50%);
                     background-image: url("../../pic/postcardMaterial/paper/paper1.png");
                 }
             }
@@ -830,7 +831,6 @@
                 .postcardHomeLeft{
                     .posHomeLogo{
                         width: 20%;
-                        left: 43%;
                     }
                 }
                 .postcardHomeRight{
@@ -866,7 +866,6 @@
                 .postcardHomeLeft{
                     .posHomeLogo{
                         width: 25%;
-                        left: 39%;
                     }
                 }
                 .postcardHomeRight{
@@ -923,13 +922,13 @@
                     height: 60%;
                     .posHomeLogo{
                         width: 68px;
-                        left: 43%;
                         bottom: 2%;
                     }
                 }
                 .postcardHomeRight{
                     height: 180px;
                     width: 100%;
+                    border-left:none;
                     .posHomeWords{
                         height: 65%;
                         h1{
