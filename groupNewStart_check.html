@@ -61,7 +61,7 @@
                         <li class="level0 gray1">瀏覽建團資訊</li>
                     </ul>
                 </div>
-                <form action="#" class="groupNewStart group">
+                <form action="#" class="groupNewStart group gray1">
 
                     <div class="left">
                         <div class="headLine">
@@ -232,6 +232,15 @@
         </footer>
     </div>
     <script>
+        $(document).ready(function(){
+            $('.pic .imgs .img img').click(function(){ 
+                let mig = $(this).attr("src");
+                $('.pic .imgs .img').removeClass("now");
+                $(this).parent().addClass("now");
+                $(".nowPic").attr("src", mig);      //要更換的圖片位置
+            }); 
+        });
+        
         new Vue({
             el: '#groupAllList',
             data: {  
